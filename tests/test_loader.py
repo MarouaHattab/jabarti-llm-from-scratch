@@ -8,7 +8,7 @@ from data_exploration.loader import load_split
 
 
 class LoaderTests(unittest.TestCase):
-    def test_loads_only_requested_split_at_pinned_revision(self):
+    def test_loads_only_requested_split_at_default_revision(self):
         expected = pd.DataFrame({"text": ["hello"]})
         with patch("data_exploration.loader.load_dataset") as remote:
             remote.return_value.to_pandas.return_value = expected
@@ -16,12 +16,17 @@ class LoaderTests(unittest.TestCase):
             self.assertIs(actual, expected)
             args, kwargs = remote.call_args
             self.assertEqual(args, (config.REPO, "pretrain"))
-            self.assertEqual(kwargs["revision"], config.REVISION)
+            self.assertEqual(kwargs["revision"], "main")
             self.assertEqual(kwargs["split"], "phase1_train")
             self.assertEqual(kwargs["data_files"], {
                 "phase1_train": "pretrain/phase1_train-*.parquet",
             })
             self.assertFalse(kwargs["streaming"])
+
+    def test_accepts_optional_revision_setting(self):
+        with patch.object(config, "REVISION", "specific-revision", create=True), patch("data_exploration.loader.load_dataset") as remote:
+            load_split("pretrain", "phase1_train")
+            self.assertEqual(remote.call_args.kwargs["revision"], "specific-revision")
 
     def test_preview_streams_a_deterministic_prefix(self):
         with patch("data_exploration.loader.load_dataset") as remote:

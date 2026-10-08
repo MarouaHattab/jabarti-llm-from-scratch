@@ -10,12 +10,13 @@ def load_split(subset: str, split: str, *, max_rows: int | None = None) -> pd.Da
         raise ValueError(f"Unknown dataset split: {subset} / {split}")
     if max_rows is not None and (type(max_rows) is not int or max_rows <= 0):
         raise ValueError("max_rows must be a positive integer")
+    revision = getattr(config, "REVISION", "main")
     try:
         dataset = load_dataset(
             config.REPO,
             subset,
             split=split,
-            revision=config.REVISION,
+            revision=revision,
             data_files={split: f"{subset}/{split}-*.parquet"},
             cache_dir=str(config.CACHE_DIR),
             streaming=max_rows is not None,
@@ -29,5 +30,5 @@ def load_split(subset: str, split: str, *, max_rows: int | None = None) -> pd.Da
     except Exception as exc:
         raise RuntimeError(
             f"Could not load {subset} / {split} from {config.REPO} "
-            f"at revision {config.REVISION}: {exc}"
+            f"at revision {revision}: {exc}"
         ) from exc

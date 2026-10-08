@@ -1,9 +1,7 @@
 from pathlib import Path
 
 REPO = "bakrianoo/jabarti-llm-dataset"
-# The notebook used the default upstream revision. Pin the revision audited
-# during refactoring so subsequent runs use the same dataset contents.
-REVISION = "7b7aeaaff76fdc254a9d245146c9d8a624bbd552"
+
 SPLITS = {
     "pretrain / phase1_train": ("pretrain", "phase1_train"),
     "pretrain / phase1_eval": ("pretrain", "phase1_eval"),

@@ -31,7 +31,8 @@ def write_report(
              f"PREVIEW first {max_rows} rows per split; not full-dataset statistics")
     heading = name.replace("_", " ").title()
     content = [heading, "=" * len(heading), f"Repository: {config.REPO}",
-               f"Revision: {config.REVISION}", f"Scope: {scope}", "", *sections]
+               f"Revision: {getattr(config, 'REVISION', 'main (upstream default)')}",
+               f"Scope: {scope}", "", *sections]
     path.write_text("\n".join(content).rstrip() + "\n", encoding="utf-8")
     return path
 
