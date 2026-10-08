@@ -1,7 +1,10 @@
 import pandas as pd
 from datasets import load_dataset
 
-from data_exploration import config
+if __package__:
+    from . import config
+else:
+    import config
 
 
 def load_split(subset: str, split: str, *, max_rows: int | None = None) -> pd.DataFrame:
