@@ -51,13 +51,14 @@ class ScriptTests(unittest.TestCase):
             module = importlib.import_module(f"data_exploration.{name}")
             with self.subTest(module=name), tempfile.TemporaryDirectory() as directory, redirect_stdout(io.StringIO()), patch(
                 f"data_exploration.{name}.load_split", side_effect=lambda subset, split, **kwargs: sample_frame(subset)
-            ) as load:
-                self.assertEqual(module.main(["--output-dir", directory]), 0)
+            ) as load, patch.object(config, "OUTPUT_DIR", Path(directory)):
+                self.assertEqual(module.main(), 0)
                 self.assertEqual(load.call_count, 6)
                 path = Path(directory) / f"{name}.txt"
                 self.assertEqual(list(Path(directory).iterdir()), [path])
                 text = path.read_text(encoding="utf-8")
-                self.assertIn("FULL", text)
+                self.assertIn(f"Repository: {config.REPO}", text)
+                self.assertNotIn("Revision:", text)
                 if name == "text_lengths":
                     self.assertEqual(text.count("Character length distribution"), 6)
         self.assertEqual(hashlib.sha256(notebook.read_bytes()).digest(), before)
@@ -66,17 +67,21 @@ class ScriptTests(unittest.TestCase):
         for name in MODULES:
             with self.subTest(module=name), tempfile.TemporaryDirectory() as directory, redirect_stdout(io.StringIO()), patch(
                 f"data_exploration.{name}.load_split", return_value=sample_frame("pretrain")
+            ), patch.object(config, "OUTPUT_DIR", Path(directory)), patch.object(
+                config, "SPLITS", {"pretrain / phase1_eval": ("pretrain", "phase1_eval")}
             ):
                 module = importlib.import_module(f"data_exploration.{name}")
-                self.assertEqual(module.main(["--output-dir", directory, "--split", "pretrain/phase1_eval"]), 0)
+                self.assertEqual(module.main(), 0)
                 self.assertEqual([path.name for path in Path(directory).iterdir()], [f"{name}.txt"])
 
     def test_all_reports_handle_empty_and_missing_columns(self):
-        with tempfile.TemporaryDirectory() as directory, redirect_stdout(io.StringIO()):
+        with tempfile.TemporaryDirectory() as directory, redirect_stdout(io.StringIO()), patch.object(
+            config, "OUTPUT_DIR", Path(directory)
+        ):
             for name in MODULES:
                 module = importlib.import_module(f"data_exploration.{name}")
                 with patch.object(module, "load_split", return_value=pd.DataFrame()):
-                    self.assertEqual(module.main(["--output-dir", directory]), 0)
+                    self.assertEqual(module.main(), 0)
                 self.assertTrue((Path(directory) / f"{name}.txt").is_file())
 
     def test_invalid_output_path_fails_clearly(self):
@@ -86,25 +91,28 @@ class ScriptTests(unittest.TestCase):
         ):
             path = Path(directory) / "file.txt"
             path.write_text("existing file", encoding="utf-8")
-            self.assertEqual(main(["--output-dir", str(path)]), 1)
+            with patch.object(config, "OUTPUT_DIR", path):
+                self.assertEqual(main(), 1)
             self.assertIn("Exploration failed", errors.getvalue())
 
     def test_module_command_line_imports_without_sys_path_changes(self):
-        for name in MODULES:
-            with self.subTest(module=name):
-                result = subprocess.run([sys.executable, "-m", f"data_exploration.{name}", "--help"],
-                                        cwd=config.PROJECT_ROOT, capture_output=True, text=True, timeout=60)
-                self.assertEqual(result.returncode, 0, result.stderr)
-                self.assertIn("--max-rows", result.stdout)
+        code = ("import importlib; "
+                f"[importlib.import_module('data_exploration.' + name) for name in {MODULES!r}]")
+        result = subprocess.run([sys.executable, "-c", code], cwd=config.PROJECT_ROOT,
+                                capture_output=True, text=True, timeout=60)
+        self.assertEqual(result.returncode, 0, result.stderr)
 
-    def test_direct_script_command_from_exploration_directory(self):
+    def test_scripts_have_parameterless_entry_points(self):
         for name in MODULES:
             with self.subTest(script=name):
-                result = subprocess.run([sys.executable, f"{name}.py", "--help"],
-                                        cwd=config.PROJECT_ROOT / "data_exploration",
-                                        capture_output=True, text=True, timeout=60)
-                self.assertEqual(result.returncode, 0, result.stderr)
-                self.assertIn("--max-rows", result.stdout)
+                module = importlib.import_module(f"data_exploration.{name}")
+                source = Path(module.__file__).read_text(encoding="utf-8")
+                function = next(node for node in ast.parse(source).body
+                                if isinstance(node, ast.FunctionDef) and node.name == "main")
+                self.assertEqual(function.args.args, [])
+                self.assertNotIn("argparse", source)
+                self.assertNotIn("REVISION", source)
+                self.assertNotIn("Revision:", source)
 
     def test_runner_is_removed(self):
         self.assertFalse((config.PROJECT_ROOT / "data_exploration/run.py").exists())
@@ -122,13 +130,12 @@ class ScriptTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory, redirect_stdout(io.StringIO()), patch(
             "data_exploration.language_distribution.load_split",
             return_value=pd.DataFrame({"language": ["العربية"]}),
-        ):
-            args = ["--output-dir", directory, "--split", "finetune/eval"]
-            self.assertEqual(main(args), 0)
+        ), patch.object(config, "OUTPUT_DIR", Path(directory)):
+            self.assertEqual(main(), 0)
             path = Path(directory) / "language_distribution.txt"
             self.assertIn("العربية", path.read_text(encoding="utf-8"))
             path.write_text("old contents", encoding="utf-8")
-            self.assertEqual(main(args), 0)
+            self.assertEqual(main(), 0)
             self.assertNotIn("old contents", path.read_text(encoding="utf-8"))
             self.assertEqual(list(Path(directory).iterdir()), [path])
 
@@ -136,10 +143,10 @@ class ScriptTests(unittest.TestCase):
         from data_exploration.schema import main
         with tempfile.TemporaryDirectory() as directory, redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()), patch(
             "data_exploration.schema.load_split", side_effect=RuntimeError("offline"),
-        ):
+        ), patch.object(config, "OUTPUT_DIR", Path(directory)):
             path = Path(directory) / "schema.txt"
             path.write_text("previous complete report", encoding="utf-8")
-            self.assertEqual(main(["--output-dir", directory]), 1)
+            self.assertEqual(main(), 1)
             self.assertEqual(path.read_text(encoding="utf-8"), "previous complete report")
 
 
