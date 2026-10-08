@@ -1,5 +1,3 @@
-"""Check the extracted notebook constants."""
-
 import unittest
 
 from data_exploration.config import CHARS_PER_TOKEN, CONTEXT_LENGTHS, REPO, SPLITS

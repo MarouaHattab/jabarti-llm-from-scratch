@@ -1,14 +1,3 @@
-"""Notebook constants and project-relative output paths.
-
-Requires Python 3.11+. Install with ``python -m pip install -r requirements.txt``.
-Run every report with ``python -m data_exploration.run`` or run an individual
-module, for example ``python -m data_exploration.schema``. Each command accepts
-``--help``. Tests run with ``python -m unittest discover -s tests -v``.
-
-All results are saved as UTF-8 TXT files under outputs/data_exploration.
-The original notebook and its saved results remain in Notebooks/ unchanged.
-"""
-
 from pathlib import Path
 
 REPO = "bakrianoo/jabarti-llm-dataset"
