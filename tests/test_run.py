@@ -1,6 +1,8 @@
+import ast
 import hashlib
 import importlib
 import io
+import json
 import subprocess
 import sys
 import tempfile
@@ -27,6 +29,21 @@ def sample_frame(subset: str) -> pd.DataFrame:
 
 
 class RunTests(unittest.TestCase):
+    def test_constants_match_original_notebook(self):
+        notebook = json.loads((config.PROJECT_ROOT / "Notebooks/datasets_exploration.ipynb").read_text(encoding="utf-8"))
+        original = {}
+        for index in (1, 3):
+            tree = ast.parse("".join(notebook["cells"][index]["source"]))
+            for node in tree.body:
+                if isinstance(node, ast.Assign):
+                    for target in node.targets:
+                        if isinstance(target, ast.Name) and target.id in ("REPO", "splits", "CHARS_PER_TOKEN", "CONTEXT_LENGHTS"):
+                            original[target.id] = ast.literal_eval(node.value)
+        self.assertEqual(config.REPO, original["REPO"])
+        self.assertEqual(config.SPLITS, original["splits"])
+        self.assertEqual(config.CHARS_PER_TOKEN, original["CHARS_PER_TOKEN"])
+        self.assertEqual(config.CONTEXT_LENGTHS, tuple(original["CONTEXT_LENGHTS"]))
+
     def test_full_runner_loads_each_split_once_and_saves_seven_reports(self):
         from data_exploration.run import main
         notebook = config.PROJECT_ROOT / "Notebooks/datasets_exploration.ipynb"
