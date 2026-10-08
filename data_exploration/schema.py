@@ -11,7 +11,6 @@ else:
 
 
 def analyze(frame: pd.DataFrame, subset: str) -> str:
-    """List the columns and pandas schema of a loaded dataset split."""
     lines = [f"Columns: {len(frame.columns)}", "Column data types:"]
     lines.extend(f"{column}: {dtype}" for column, dtype in frame.dtypes.items())
     if not len(frame.columns):
@@ -20,7 +19,6 @@ def analyze(frame: pd.DataFrame, subset: str) -> str:
 
 
 def main() -> int:
-    """Write schema.txt using the settings in config.py."""
     title = "Schema"
     sections = [title, "=" * len(title), f"Repository: {config.REPO}", ""]
     try:

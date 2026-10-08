@@ -11,7 +11,6 @@ else:
 
 
 def character_lengths(frame: pd.DataFrame, subset: str) -> pd.DataFrame:
-    """Measure strings without coercing missing or invalid values into text."""
     columns = config.TEXT_COLUMNS[subset]
     lengths = pd.DataFrame(index=frame.index)
     for column in columns:
@@ -25,7 +24,6 @@ def character_lengths(frame: pd.DataFrame, subset: str) -> pd.DataFrame:
 
 
 def analyze(frame: pd.DataFrame, subset: str) -> str:
-    """Describe text lengths; pool question and answer lengths for finetune."""
     columns = config.TEXT_COLUMNS[subset]
     missing = [column for column in columns if column not in frame.columns]
     lengths = character_lengths(frame, subset)
@@ -44,7 +42,6 @@ def analyze(frame: pd.DataFrame, subset: str) -> str:
 
 
 def main() -> int:
-    """Write text_lengths.txt using the settings in config.py."""
     title = "Text Lengths"
     sections = [title, "=" * len(title), f"Repository: {config.REPO}", ""]
     try:

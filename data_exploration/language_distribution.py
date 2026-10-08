@@ -11,7 +11,6 @@ else:
 
 
 def analyze(frame: pd.DataFrame, subset: str) -> str:
-    """Count language labels using all split rows as the percentage denominator."""
     if "language" not in frame.columns:
         return "Skipped: missing language column."
     if frame.empty:
@@ -24,7 +23,6 @@ def analyze(frame: pd.DataFrame, subset: str) -> str:
 
 
 def main() -> int:
-    """Write language_distribution.txt using the settings in config.py."""
     title = "Language Distribution"
     sections = [title, "=" * len(title), f"Repository: {config.REPO}", ""]
     try:

@@ -8,7 +8,6 @@ else:
 
 
 def load_split(subset: str, split: str) -> pd.DataFrame:
-    """Load one configured dataset split as a pandas DataFrame."""
     if (subset, split) not in config.SPLITS.values():
         raise ValueError(f"Unknown dataset split: {subset} / {split}")
     try:

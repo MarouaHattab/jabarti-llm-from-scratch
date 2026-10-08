@@ -11,7 +11,6 @@ else:
 
 
 def analyze(frame: pd.DataFrame, subset: str) -> str:
-    """Report the notebook's sample count and the loaded table shape."""
     return f"Samples: {len(frame)}\nColumns: {len(frame.columns)}"
 
 

@@ -11,7 +11,6 @@ else:
 
 
 def analyze(frame: pd.DataFrame, subset: str) -> str:
-    """Report null counts and percentages without treating empty strings as null."""
     rows = len(frame)
     lines = ["Null values per column (percentage of all rows):"]
     nulls = frame.isnull().sum()
@@ -26,7 +25,6 @@ def analyze(frame: pd.DataFrame, subset: str) -> str:
 
 
 def main() -> int:
-    """Write missing_values.txt using the settings in config.py."""
     title = "Missing Values"
     sections = [title, "=" * len(title), f"Repository: {config.REPO}", ""]
     try:

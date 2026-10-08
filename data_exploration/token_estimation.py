@@ -14,7 +14,6 @@ else:
 
 
 def estimate_tokens(frame: pd.DataFrame, subset: str) -> pd.Series:
-    """Estimate tokens by summing sample characters, dividing, then truncating."""
     if (not isinstance(config.CHARS_PER_TOKEN, (int, float))
             or isinstance(config.CHARS_PER_TOKEN, bool)
             or not math.isfinite(config.CHARS_PER_TOKEN) or config.CHARS_PER_TOKEN <= 0):
@@ -25,7 +24,6 @@ def estimate_tokens(frame: pd.DataFrame, subset: str) -> pd.Series:
 
 
 def analyze(frame: pd.DataFrame, subset: str) -> str:
-    """Describe approximate token counts and inclusive context coverage."""
     tokens = estimate_tokens(frame, subset)
     lines = ["Token counts are estimates, not exact tokenizer results.",
              f"Formula: int(sample character count / {config.CHARS_PER_TOKEN})",
@@ -46,7 +44,6 @@ def analyze(frame: pd.DataFrame, subset: str) -> str:
 
 
 def main() -> int:
-    """Write token_estimation.txt using the settings in config.py."""
     title = "Token Estimation"
     sections = [title, "=" * len(title), f"Repository: {config.REPO}", ""]
     try:

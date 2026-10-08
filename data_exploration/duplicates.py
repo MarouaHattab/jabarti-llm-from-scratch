@@ -11,7 +11,6 @@ else:
 
 
 def analyze(frame: pd.DataFrame, subset: str) -> str:
-    """Count duplicate occurrences after the first, matching pandas.duplicated."""
     lines = ["Duplicates exclude the first occurrence; percentages use all split rows.",
              "Checks compare exact stored values without normalization."]
     checks = [("Duplicate text records", ["text"]),
@@ -28,7 +27,6 @@ def analyze(frame: pd.DataFrame, subset: str) -> str:
 
 
 def main() -> int:
-    """Write duplicates.txt using the settings in config.py."""
     title = "Duplicates"
     sections = [title, "=" * len(title), f"Repository: {config.REPO}", ""]
     try:
