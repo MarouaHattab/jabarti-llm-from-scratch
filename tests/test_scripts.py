@@ -28,7 +28,7 @@ def sample_frame(subset: str) -> pd.DataFrame:
                          "language": ["ar", "en"]})
 
 
-class RunTests(unittest.TestCase):
+class ScriptTests(unittest.TestCase):
     def test_constants_match_original_notebook(self):
         notebook = json.loads((config.PROJECT_ROOT / "Notebooks/datasets_exploration.ipynb").read_text(encoding="utf-8"))
         original = {}
@@ -44,20 +44,22 @@ class RunTests(unittest.TestCase):
         self.assertEqual(config.CHARS_PER_TOKEN, original["CHARS_PER_TOKEN"])
         self.assertEqual(config.CONTEXT_LENGTHS, tuple(original["CONTEXT_LENGHTS"]))
 
-    def test_full_runner_loads_each_split_once_and_saves_seven_reports(self):
-        from data_exploration.run import main
+    def test_each_script_loads_each_split_once(self):
         notebook = config.PROJECT_ROOT / "Notebooks/datasets_exploration.ipynb"
         before = hashlib.sha256(notebook.read_bytes()).digest()
-        with tempfile.TemporaryDirectory() as directory, redirect_stdout(io.StringIO()), patch(
-            "utils.report.load_split", side_effect=lambda subset, split, **kwargs: sample_frame(subset)
-        ) as load:
-            self.assertEqual(main(["--output-dir", directory]), 0)
-            self.assertEqual(load.call_count, 6)
-            self.assertEqual(sorted(path.name for path in Path(directory).iterdir()),
-                             sorted(f"{name}.txt" for name in MODULES))
-            text = (Path(directory) / "text_lengths.txt").read_text(encoding="utf-8")
-            self.assertEqual(text.count("Character length distribution"), 6)
-            self.assertIn("FULL", text)
+        for name in MODULES:
+            with self.subTest(module=name), tempfile.TemporaryDirectory() as directory, redirect_stdout(io.StringIO()), patch(
+                "utils.report.load_split", side_effect=lambda subset, split, **kwargs: sample_frame(subset)
+            ) as load:
+                module = importlib.import_module(f"data_exploration.{name}")
+                self.assertEqual(module.main(["--output-dir", directory]), 0)
+                self.assertEqual(load.call_count, 6)
+                path = Path(directory) / f"{name}.txt"
+                self.assertEqual(list(Path(directory).iterdir()), [path])
+                text = path.read_text(encoding="utf-8")
+                self.assertIn("FULL", text)
+                if name == "text_lengths":
+                    self.assertEqual(text.count("Character length distribution"), 6)
         self.assertEqual(hashlib.sha256(notebook.read_bytes()).digest(), before)
 
     def test_independent_modules_write_only_their_own_report(self):
@@ -70,16 +72,16 @@ class RunTests(unittest.TestCase):
                 self.assertEqual([path.name for path in Path(directory).iterdir()], [f"{name}.txt"])
 
     def test_all_reports_handle_empty_and_missing_columns(self):
-        from data_exploration.run import main
         with tempfile.TemporaryDirectory() as directory, redirect_stdout(io.StringIO()), patch(
             "utils.report.load_split", return_value=pd.DataFrame()
         ):
-            self.assertEqual(main(["--output-dir", directory]), 0)
             for name in MODULES:
+                module = importlib.import_module(f"data_exploration.{name}")
+                self.assertEqual(module.main(["--output-dir", directory]), 0)
                 self.assertTrue((Path(directory) / f"{name}.txt").is_file())
 
     def test_invalid_output_path_fails_clearly(self):
-        from data_exploration.run import main
+        from data_exploration.schema import main
         with tempfile.TemporaryDirectory() as directory, redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()) as errors, patch(
             "utils.report.load_split", return_value=sample_frame("pretrain")
         ):
@@ -89,12 +91,24 @@ class RunTests(unittest.TestCase):
             self.assertIn("Exploration failed", errors.getvalue())
 
     def test_module_command_line_imports_without_sys_path_changes(self):
-        for name in (*MODULES, "run"):
+        for name in MODULES:
             with self.subTest(module=name):
                 result = subprocess.run([sys.executable, "-m", f"data_exploration.{name}", "--help"],
                                         cwd=config.PROJECT_ROOT, capture_output=True, text=True, timeout=60)
                 self.assertEqual(result.returncode, 0, result.stderr)
                 self.assertIn("--max-rows", result.stdout)
+
+    def test_direct_script_command_from_exploration_directory(self):
+        for name in MODULES:
+            with self.subTest(script=name):
+                result = subprocess.run([sys.executable, f"{name}.py", "--help"],
+                                        cwd=config.PROJECT_ROOT / "data_exploration",
+                                        capture_output=True, text=True, timeout=60)
+                self.assertEqual(result.returncode, 0, result.stderr)
+                self.assertIn("--max-rows", result.stdout)
+
+    def test_runner_is_removed(self):
+        self.assertFalse((config.PROJECT_ROOT / "data_exploration/run.py").exists())
 
 
 if __name__ == "__main__":

@@ -1,3 +1,7 @@
+if not __package__:
+    from _bootstrap import prepare_imports
+    prepare_imports()
+
 import pandas as pd
 
 from utils.report import run_reports

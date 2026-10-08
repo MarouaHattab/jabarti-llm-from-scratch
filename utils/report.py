@@ -53,9 +53,9 @@ def run_reports(analyses: dict[str, Analysis], argv: list[str] | None = None) ->
                  for label, (subset, split) in config.SPLITS.items()}
     parser = argparse.ArgumentParser(
         description="Explore Jabarti splits and save separate UTF-8 TXT reports.",
-        epilog=("Configure the dataset and constants in data_exploration/config.py. "
-                "Run from the project root with Python 3.11+. Install dependencies "
-                "using python -m pip install -r requirements.txt. The original "
+        epilog=("From data_exploration, execute python <script_name>.py with Python 3.11+. "
+                "Configure the dataset and constants in config.py. Install dependencies "
+                "from the project root using python -m pip install -r requirements.txt. The original "
                 "notebook is preserved in Notebooks/datasets_exploration.ipynb."),
     )
     parser.add_argument("--output-dir", type=Path, default=config.OUTPUT_DIR,
