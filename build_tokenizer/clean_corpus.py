@@ -27,6 +27,22 @@ EVAL_SPLITS=  ["phase1_eval", "phase2_eval"]
 
 OUT_DIR = Path(__file__).resolve().parent.parent / "outputs"
 
+
+def demo_normalizer():
+    print("TYPE B NORMALIZER (embeddable, runs at inference too)")
+
+    samples = [
+        "جُمْهُورِيَّةُ مِصْرَ الْعَرَبِيَّة",      # heavy diacritics
+        "أحمد إبراهيم آدم علىّ",                   # alef + ya variants
+        "The   United    States",                 # extra spaces
+    ]
+
+    for s in samples:
+        print(f"  raw       : {s}")
+        print(f"  normalized: {normalize_text(s)}")
+        print("="*30)
+
+
 def download_and_filter():
 # Download raw hf splits , apply hard cap to train splits , write *_filtered.parquet
 
@@ -81,6 +97,8 @@ def main():
         output_path=OUT_DIR/ f"{name}_cleaned.parquet"
         clean_phase(phase=name,input_path=input_path,output_path=output_path)
 
+ 
 
 if __name__ == "__main__":
     main()
+   
