@@ -7,6 +7,7 @@
 from pathlib import Path
 from huggingface_hub import hf_hub_download
 import pandas as pd
+from cleaning import clean_dataframe,normalize_text,prepare_document
 
 from data_exploration.config import OUTPUT_DIR
 REPO = "bakrianoo/jabarti-llm-dataset"
@@ -22,6 +23,7 @@ HF_FILES = {
     "ft_eval": "finetune/eval-00000-of-00001.parquet",
 }
 TRAIN_SPLITS=  ["phase1_train", "phase2_train"]
+EVAL_SPLITS=  ["phase1_eval", "phase2_eval"]
 
 OUT_DIR = Path(__file__).resolve().parent.parent / "outputs"
 
@@ -50,8 +52,34 @@ def download_and_filter():
             print(f"df : {name} => {before_filter} filtered to be  {after_filter} rows")
         output_path=OUT_DIR/ f"{name}_filtered.parquet"
         df.to_parquet(output_path, index=False)
+
+def clean_phase(phase,input_path,output_path):
+    df = pd.read_parquet(input_path)
+    print(f" Souce : {input_path}")
+    print(f" Rows : {len(df) : ,}")
+
+    cleaned_df = clean_dataframe(df)
+    removed_rows = len(df) - len(cleaned_df)
+
+    print(f" Rows kept : {len(cleaned_df):,}  (dropped {removed_rows:,} empty rows)")
+
+    cleaned_df.to_parquet(output_path, index=False)
+
+
+
 def main():
     download_and_filter()
+
+    for name in TRAIN_SPLITS:
+        input_path=OUT_DIR/ f"{name}_filtered.parquet"
+        output_path=OUT_DIR/ f"{name}_cleaned.parquet"
+        clean_phase(phase=name,input_path=input_path,output_path=output_path)
+
+
+    for name in EVAL_SPLITS:
+        input_path=OUT_DIR/ f"{name}_filtered.parquet"
+        output_path=OUT_DIR/ f"{name}_cleaned.parquet"
+        clean_phase(phase=name,input_path=input_path,output_path=output_path)
 
 
 if __name__ == "__main__":
