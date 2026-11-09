@@ -9,8 +9,7 @@ from cleaning import build_normalizer
 CURRENT_WD=Path(__file__).resolve().parent
 PROJECT_ROOT=CURRENT_WD.parent
 CLEAN_PATHS=[
-    PROJECT_ROOT / "outputs" / "phase1_train_cleaned.parquet",
-    PROJECT_ROOT / "outputs" / "phase2_train_cleaned.parquet",
+    CURRENT_WD / "output" / "tokenizer_corpus.parquet",
 ]
 OUTPUT_PATH=CURRENT_WD / "tokenizer.json"
 
