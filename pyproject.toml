@@ -31,7 +31,7 @@ url = "https://download.pytorch.org/whl/cu130"
 explicit = true
 
 [tool.setuptools.packages.find]
-include = ["jabarti_llm*", "data_exploration*"]
+include = ["jabarti_llm*", "scripts*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

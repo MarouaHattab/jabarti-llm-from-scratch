@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 from huggingface_hub import snapshot_download
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from jabarti_llm.tokenizer import Tokenizer
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")

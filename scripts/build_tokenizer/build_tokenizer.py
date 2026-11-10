@@ -1,13 +1,19 @@
 from pathlib import Path
+import sys
 import pandas as pd
 from tokenizers import Tokenizer,decoders, models, pre_tokenizers,trainers
-from cleaning import build_normalizer
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(PROJECT_ROOT))
+from scripts.build_tokenizer.cleaning import build_normalizer
+
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 
 # config 
 
 CURRENT_WD=Path(__file__).resolve().parent
-PROJECT_ROOT=CURRENT_WD.parent
+PROJECT_ROOT=CURRENT_WD.parents[1]
 CLEAN_PATHS=[
     CURRENT_WD / "output" / "tokenizer_corpus.parquet",
 ]

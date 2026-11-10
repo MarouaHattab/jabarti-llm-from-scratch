@@ -8,12 +8,19 @@
 import argparse
 from html import parser
 from pathlib import Path
+import sys
 from huggingface_hub import hf_hub_download,snapshot_download
 import pandas as pd
 from sympy import root
-from cleaning import clean_dataframe,normalize_text,prepare_document
 
-from data_exploration.config import OUTPUT_DIR
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(PROJECT_ROOT))
+from scripts.build_tokenizer.cleaning import (
+    clean_dataframe,
+    normalize_text,
+    prepare_document,
+)
+from scripts.data_exploration.config import OUTPUT_DIR
 REPO = "bakrianoo/jabarti-llm-dataset"
 
 TRAIN_GLOB = "train-*.parquet"

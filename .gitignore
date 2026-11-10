@@ -9,6 +9,11 @@ outputs/
 build_tokenizer/output/*
 !build_tokenizer/output/.gitkeep
 !build_tokenizer/output/README.md
+scripts/build_tokenizer/output/*
+!scripts/build_tokenizer/output/.gitkeep
+!scripts/build_tokenizer/output/README.md
+*.bin
+*.parquet
 .env
 .env.*
 tmp/

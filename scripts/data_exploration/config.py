@@ -13,6 +13,6 @@ SPLITS = {
 TEXT_COLUMNS = {"pretrain": ("text",), "finetune": ("question", "answer")}
 CHARS_PER_TOKEN = 3.5
 CONTEXT_LENGTHS = (512, 1024, 2048)
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 OUTPUT_DIR = PROJECT_ROOT / "outputs" / "data_exploration"
 CACHE_DIR = PROJECT_ROOT / "data" / "cache"

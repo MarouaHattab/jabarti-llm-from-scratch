@@ -31,7 +31,7 @@ from jabarti_llm.config import steps_for_epochs, unique_run_name
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-PACKED_DIR = Path("build_tokenizer/output")
+PACKED_DIR = Path("scripts/build_tokenizer/output")
 
 def _make_loader(dataset, training_config, model_config,
                   use_shuffle: bool=True, shuffle_seed: int=42):

@@ -14,7 +14,7 @@ class PackedDataset(Dataset):
          if not self.path.exists():
             raise FileNotFoundError(
                 f"No packed corpus at {self.path}. Build it first:\n"
-                f"  python build_tokenizer/pack_corpus.py"
+                f"  python scripts/build_tokenizer/pack_corpus.py"
             )
 
          self.tokens = np.memmap(self.path, dtype=np.uint16, mode='r')
