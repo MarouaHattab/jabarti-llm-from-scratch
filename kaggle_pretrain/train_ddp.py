@@ -192,28 +192,31 @@ def save_checkpoint(path, model, optimizer, scheduler, model_config, step):
 
 
 def upload_checkpoint(api, path, repo_id, step):
-    api.upload_file(
-        path_or_fileobj=str(path),
-        path_in_repo=f"checkpoints/{path.name}",
-        repo_id=repo_id,
-        repo_type="model",
-        commit_message=f"Upload pretraining checkpoint at step {step}",
-    )
-    manifest = path.parent / "latest.json"
-    manifest.write_text(
-        json.dumps(
-            {"step": step, "checkpoint": f"checkpoints/{path.name}"},
-            indent=2,
-        ),
-        encoding="utf-8",
-    )
-    api.upload_file(
-        path_or_fileobj=str(manifest),
-        path_in_repo="checkpoints/latest.json",
-        repo_id=repo_id,
-        repo_type="model",
-        commit_message=f"Update latest checkpoint pointer at step {step}",
-    )
+    try:
+        api.upload_file(
+            path_or_fileobj=str(path),
+            path_in_repo=f"checkpoints/{path.name}",
+            repo_id=repo_id,
+            repo_type="model",
+            commit_message=f"Upload pretraining checkpoint at step {step}",
+        )
+        manifest = path.parent / "latest.json"
+        manifest.write_text(
+            json.dumps(
+                {"step": step, "checkpoint": f"checkpoints/{path.name}"},
+                indent=2,
+            ),
+            encoding="utf-8",
+        )
+        api.upload_file(
+            path_or_fileobj=str(manifest),
+            path_in_repo="checkpoints/latest.json",
+            repo_id=repo_id,
+            repo_type="model",
+            commit_message=f"Update latest checkpoint pointer at step {step}",
+        )
+    except Exception as e:
+        print(f"Warning: Failed to upload checkpoint at step {step} to {repo_id}: {e}")
 
 
 @torch.no_grad()
