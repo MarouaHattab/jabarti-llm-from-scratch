@@ -20,6 +20,16 @@ dependencies = [
     "fastparquet>=2026.5.0",
 ]
 
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu130", marker = "sys_platform == 'win32' or sys_platform == 'linux'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
 [tool.setuptools.packages.find]
 include = ["jabarti_llm*", "data_exploration*"]
 
