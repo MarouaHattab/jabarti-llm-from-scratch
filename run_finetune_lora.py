@@ -22,8 +22,8 @@ from jabarti_llm import (
 from jabarti_llm.config import steps_for_epochs, unique_run_name
 from jabarti_llm.training import load_checkpoint, model_config_from_checkpoint
 
-FT_TRAIN = "scripts/ch03-build-tokenizer/output/ft_train_filtered.parquet"
-FT_EVAL = "scripts/ch03-build-tokenizer/output/ft_eval_filtered.parquet"
+FT_TRAIN = "scripts/build_tokenizer/output/ft_train_filtered.parquet"
+FT_EVAL = "scripts/build_tokenizer/output/ft_eval_filtered.parquet"
 
 FT_SAMPLE_PROMPTS = (
     # --- Arabic ---
