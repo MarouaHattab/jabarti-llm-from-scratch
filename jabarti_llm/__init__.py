@@ -11,8 +11,11 @@ from jabarti_llm.model import (
     GPT,
     FeedForward,
     InputEmbedding,
+    LoRALinear,
     MultiHeadAttention,
     TransformerBlock,
+    apply_lora,
+    merge_lora,
 )
 from jabarti_llm.tokenizer import Tokenizer
 from jabarti_llm.training import (
@@ -42,6 +45,7 @@ __all__ = [
     "Trainer",
     "TrainingConfig",
     "TransformerBlock",
+    "apply_lora",
     "chat_collate_fn",
     "collate_fn",
     "format_chat",
@@ -49,6 +53,7 @@ __all__ = [
     "generate",
     "generate_ids",
     "load_checkpoint",
+    "merge_lora",
     "model_config_from_checkpoint",
     "save_checkpoint",
     "unfreeze_tail"

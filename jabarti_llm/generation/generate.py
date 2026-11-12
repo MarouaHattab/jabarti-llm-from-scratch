@@ -49,6 +49,15 @@ def generate_ids(model, prompt_ids, config, eos_id=None, device=None):
 
 
 def generate(model, tokenizer, prompt, config, device=None, chat: bool=False):
+    """Continue a prompt, returning only the newly generated text.
+
+    The prompt is prefixed with [BOS] because training wrapped every document
+    that way (ch08); a model given a bare first token is being asked to
+    continue from a state it never saw.
+
+    chat=True treats the prompt as a question and wraps it in the same
+    [SYS] ... [USER] ... [ASST] template finetuning used, for the same reason.
+    """
 
     if not chat:
         prompt_ids = [tokenizer.BOS] + tokenizer.encode(prompt)
