@@ -1,0 +1,1570 @@
+[
+  {
+    "id": "TEST_001",
+    "category": "English Questions",
+    "language": "English",
+    "question": "Who was George Averoff, and how did he build his fortune in nineteenth-century Egypt?",
+    "expected_answer": "George Averoff was a Greek businessman and philanthropist who expanded his wealth in Egypt through commerce, banking, real estate, and river transportation along the Nile.",
+    "supporting_context": "George Averoff moved to Egypt as a young man and became wealthy through trade, banking, real estate, and river transportation along the Nile, becoming a leading merchant.",
+    "source_reference": "Article: George Averoff (train_phase_2#19102)",
+    "dataset_support": "supported",
+    "expected_behavior": "Answer accurately in English using the historical details present in the dataset.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Relevance",
+      "Completeness",
+      "Language quality"
+    ]
+  },
+  {
+    "id": "TEST_002",
+    "category": "English Questions",
+    "language": "English",
+    "question": "When and where was George Averoff born, and what major sports monument did he fund in Athens?",
+    "expected_answer": "He was born on 15 August 1815 in Metsovo, northern Greece (then Ottoman Empire), and he funded the restoration of the Panathenaic Stadium for the 1896 Olympic Games.",
+    "supporting_context": "Born in Metsovo on 15 August 1815; his charitable contributions in Greece included the refurbishment of the Panathenaic Stadium for the first modern Olympics.",
+    "source_reference": "Article: George Averoff (train_phase_2#19102)",
+    "dataset_support": "supported",
+    "expected_behavior": "State birth date/location and the Panathenaic Stadium clearly without hallucinating.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Relevance",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_003",
+    "category": "English Questions",
+    "language": "English",
+    "question": "Who was Jaroslav Drobný, and what dual-sport world achievements is he recognized for?",
+    "expected_answer": "Jaroslav Drobný was an elite amateur tennis player and world champion ice hockey player, inducted into both the International Tennis Hall of Fame and the IIHF Hall of Fame.",
+    "supporting_context": "World No. 1 amateur tennis player, champion in both tennis and ice hockey, member of both Tennis and IIHF Halls of Fame.",
+    "source_reference": "Article: Jaroslav Drobný (train_phase_2#19123)",
+    "dataset_support": "supported",
+    "expected_behavior": "Identify his dual career in tennis and ice hockey.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Relevance"
+    ]
+  },
+  {
+    "id": "TEST_004",
+    "category": "English Questions",
+    "language": "English",
+    "question": "Which nationality did Jaroslav Drobný adopt during his major tennis victories, and which two Grand Slam singles titles did he win under it?",
+    "expected_answer": "He competed as an Egyptian citizen, winning the French Open in 1951 and Wimbledon in 1954.",
+    "supporting_context": "Traveled as an Egyptian citizen; won the French Open in 1951 and Wimbledon in 1954, becoming the only Egyptian citizen to win those titles.",
+    "source_reference": "Article: Jaroslav Drobný (train_phase_2#19123)",
+    "dataset_support": "supported",
+    "expected_behavior": "State Egyptian citizenship, French Open 1951, and Wimbledon 1954.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_005",
+    "category": "English Questions",
+    "language": "English",
+    "question": "Why did Jaroslav Drobný defect from Czechoslovakia in 1949?",
+    "expected_answer": "He defected because he resented the communist regime's political use of his athletic fame for propaganda and its growing restrictions on his international tournament travel.",
+    "supporting_context": "Jaroslav Drobný left because he resented the communist regime's use of his fame for propaganda and travel restrictions.",
+    "source_reference": "Article: Jaroslav Drobný (train_phase_2#19123)",
+    "dataset_support": "supported",
+    "expected_behavior": "Provide the political and freedom-of-travel reasons for defection.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_006",
+    "category": "English Questions",
+    "language": "English",
+    "question": "What Roman administrative crisis led Emperor Nerva to adopt Trajan in 97 AD?",
+    "expected_answer": "Nerva faced pressure and rebellion from the Praetorian Guard after Domitian's assassination; adopting the popular military general Trajan stabilized military support and secured the succession.",
+    "supporting_context": "Nerva faced a mutiny of the Praetorian Guard in 97 AD and resolved the succession crisis by adopting the respected military commander Trajan as his heir.",
+    "source_reference": "Article: Nerva (phase1/phase2 Roman history)",
+    "dataset_support": "supported",
+    "expected_behavior": "Explain the Praetorian rebellion and Trajan's military standing.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Reasoning quality"
+    ]
+  },
+  {
+    "id": "TEST_007",
+    "category": "English Questions",
+    "language": "English",
+    "question": "What major military reforms did Emperor Gallienus implement during the Crisis of the Third Century?",
+    "expected_answer": "Gallienus created a mobile cavalry reserve capable of rapid response and stripped senatorial aristocrats of senior military commands in favor of experienced equestrian soldiers.",
+    "supporting_context": "Gallienus established a centralized mobile cavalry force and excluded senators from military commands, opening them to equestrian officers.",
+    "source_reference": "Article: Gallienus (phase1/phase2 Roman history)",
+    "dataset_support": "supported",
+    "expected_behavior": "Highlight the cavalry reserve and the replacement of senatorial commanders.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_008",
+    "category": "English Questions",
+    "language": "English",
+    "question": "What is the Red Basilica in Pergamon, and which Egyptian deities was it dedicated to?",
+    "expected_answer": "The Red Basilica is a massive monumental brick temple complex in Pergamon (modern Turkey) dedicated to the worship of Egyptian deities, primarily Serapis, Isis, and Osiris/Harpocrates.",
+    "supporting_context": "The Red Basilica is a vast red-brick complex constructed under Hadrian in Pergamon dedicated to Egyptian gods, especially Serapis and Isis.",
+    "source_reference": "Article: Red Basilica (phase1/phase2 Hellenistic & Roman religion)",
+    "dataset_support": "supported",
+    "expected_behavior": "Identify the Pergamon location and Egyptian deities (Serapis/Isis).",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Relevance"
+    ]
+  },
+  {
+    "id": "TEST_009",
+    "category": "English Questions",
+    "language": "English",
+    "question": "Which Biblical pharaoh attacked Jerusalem during the reign of Rehoboam, and what Egyptian pharaoh does modern Egyptology identify him with?",
+    "expected_answer": "The Bible names Pharaoh Shishak, whom modern Egyptologists identify with Shoshenq I (founder of the Twenty-second Dynasty).",
+    "supporting_context": "In the Hebrew Bible, Pharaoh Shishak raided Jerusalem in the fifth year of King Rehoboam; he is historically equated with Shoshenq I.",
+    "source_reference": "Article: Pharaohs in the Bible (train_phase_2)",
+    "dataset_support": "supported",
+    "expected_behavior": "Connect Biblical Shishak with Shoshenq I and Rehoboam's reign.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Relevance"
+    ]
+  },
+  {
+    "id": "TEST_010",
+    "category": "English Questions",
+    "language": "English",
+    "question": "What is the narrative core of the ancient apocryphal text 'Joseph and Aseneth'?",
+    "expected_answer": "The text recounts how Aseneth, the daughter of an Egyptian pagan priest of Heliopolis, rejected her idols, repented, and converted to the worship of the God of Israel before marrying the patriarch Joseph.",
+    "supporting_context": "Joseph and Aseneth is a Jewish Hellenistic narrative detailing Aseneth's conversion from Egyptian idolatry to monotheism to marry Joseph.",
+    "source_reference": "Article: Joseph and Aseneth (train_phase_2)",
+    "dataset_support": "supported",
+    "expected_behavior": "Summarize the conversion narrative and marriage to Joseph.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_011",
+    "category": "English Questions",
+    "language": "English",
+    "question": "Where did art historian Hildegard Zaloscer work between 1946 and 1968 after leaving Austria?",
+    "expected_answer": "She worked as a professor of art history at the University of Alexandria in Egypt.",
+    "supporting_context": "Hildegard Zaloscer worked in Egypt, where she was a professor of art history at the University of Alexandria from 1946 to 1968.",
+    "source_reference": "Article: Hilde Zaloscer (train_phase_2)",
+    "dataset_support": "supported",
+    "expected_behavior": "State University of Alexandria and art history professorship.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Relevance"
+    ]
+  },
+  {
+    "id": "TEST_012",
+    "category": "English Questions",
+    "language": "English",
+    "question": "What prestigious American science honor did Egyptian-American chemist Mostafa El-Sayed receive in 2007?",
+    "expected_answer": "He received the U.S. National Medal of Science in 2007 for his contributions to nanoscience and laser spectroscopy.",
+    "supporting_context": "Mostafa El-Sayed received the U.S. National Medal of Science in 2007.",
+    "source_reference": "Dataset prompt references & pretraining biography",
+    "dataset_support": "supported",
+    "expected_behavior": "Name the National Medal of Science.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_013",
+    "category": "English Questions",
+    "language": "English",
+    "question": "Which famous chanson did Alexandria-born songwriter Georges Moustaki compose for Édith Piaf in 1959?",
+    "expected_answer": "He wrote the lyrics to the famous song 'Milord' for Édith Piaf.",
+    "supporting_context": "Georges Moustaki wrote the lyrics of 'Milord' for Édith Piaf in 1959.",
+    "source_reference": "Dataset prompt references & pretraining arts corpus",
+    "dataset_support": "supported",
+    "expected_behavior": "Identify the song 'Milord'.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_014",
+    "category": "English Questions",
+    "language": "English",
+    "question": "What linguistic distinction set Cleopatra VII apart from her Ptolemaic royal predecessors in Egypt?",
+    "expected_answer": "Cleopatra VII was the first and only ruler of the Greek Ptolemaic dynasty who learned to speak the Egyptian language.",
+    "supporting_context": "Cleopatra VII was the first Ptolemaic ruler known to have learned the Egyptian language.",
+    "source_reference": "Dataset prompt references & Hellenistic history articles",
+    "dataset_support": "supported",
+    "expected_behavior": "State that she learned the Egyptian language unlike previous Ptolemies.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_015",
+    "category": "English Questions",
+    "language": "English",
+    "question": "What is the title of Leila Ahmed's well-known 1999 memoir about growing up in Cairo?",
+    "expected_answer": "Her memoir is titled 'A Border Passage: From Cairo to America—A Woman's Journey'.",
+    "supporting_context": "Leila Ahmed's memoir is titled 'A Border Passage: From Cairo to America—A Woman's Journey'.",
+    "source_reference": "Dataset prompt references & literature corpus",
+    "dataset_support": "supported",
+    "expected_behavior": "Provide the title 'A Border Passage'.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_016",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "ما المنصب الحكومي الذي تولاه أحمد الليثي في مصر، وما هي الهيئة الدولية التي ترأسها عام 2005؟",
+    "expected_answer": "شغل منصب وزير الزراعة واستصلاح الأراضي في حكومة أحمد نظيف، ثم اختير عام 2005 حاكماً لصندوق التنمية الزراعية الدولي (إيفاد / IFAD).",
+    "supporting_context": "أحمد الليثي شغل منصب وزير الزراعة واستصلاح الأراضي في حكومة أحمد نظيف، واختير حاكماً لصندوق التنمية الزراعية الدولي عام 2005.",
+    "source_reference": "المقال: احمد الليثي: وزير الزراعة المصري ومسيرته الدولية (train_phase_2#17)",
+    "dataset_support": "supported",
+    "expected_behavior": "ذكر وزارة الزراعة المصرية ورئاسة صندوق التنمية الزراعية الدولي بدقة.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Relevance",
+      "Language quality"
+    ]
+  },
+  {
+    "id": "TEST_017",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "من هي الفنانة مارغريت نخلة، وأين تلقّت تعليمها الفني العالي؟",
+    "expected_answer": "مارغريت نخلة هي فنانة تشكيلية مصرية من رائدات الفن الحديث وُلدت بالإسكندرية عام 1908، ودرست الفنون في مدرسة الفنون الجميلة بباريس.",
+    "supporting_context": "مارغريت نخلة وُلدت في الإسكندرية عام 1908 وتلقت تعليمها في باريس، وعادت لتكرس نفسها للتدريس والمعارض الفنية بمصر.",
+    "source_reference": "المقال: مارغريت نخلة: رائدة الفن المصري الحديث (train_phase_2#13)",
+    "dataset_support": "supported",
+    "expected_behavior": "التعريف بمارغريت نخلة ومكان دراستها في باريس.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Relevance"
+    ]
+  },
+  {
+    "id": "TEST_018",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "ما هو المركز الحرفي الشهير الذي أسسه المعماري رمسيس ويسا واصف في الجيزة؟",
+    "expected_answer": "أسس مركز الحرانية للسجاد والنسيج التقليدي في قرية الحرانية بالجيزة لتعليم الأطفال والشباب فنون النسيج اليدوي الفطري.",
+    "supporting_context": "رمسيس ويسا واصف أسس مركزاً في الحرانية لدعم الحرف التقليدية وتطوير النسيج الفطري مع الحفاظ على جذورها الثقافية.",
+    "source_reference": "المقال: رامسيس ويسا وصيف: مهندس الفن والعمارة المصرية (train_phase_2#12)",
+    "dataset_support": "supported",
+    "expected_behavior": "ذكر مركز الحرانية للنسيج وفلسفته التراثية.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Relevance"
+    ]
+  },
+  {
+    "id": "TEST_019",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "من هو المخرج السينمائي المصري يسري نصر الله، ومتى وُلد؟",
+    "expected_answer": "يسري نصر الله هو مخرج سينمائي مصري بارز وُلد في 26 يوليو 1952، وتخرج من كلية الاقتصاد والعلوم السياسية قبل أن يتدرب مع يوسف شاهين.",
+    "supporting_context": "يسري نصر الله وُلد في 26 يوليو 1952، وعمل مساعداً ليوسف شاهين ثم قدم تجاربه السينمائية المستقلة.",
+    "source_reference": "المقال: يسري نصر الله: مخرج السينما المصرية المعاصرة (train_phase_2#11)",
+    "dataset_support": "supported",
+    "expected_behavior": "تحديد مهنته وتاريخ ميلاده الصحيح 26 يوليو 1952.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_020",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "لماذا يُعد محمد تيمور رائداً للقصة القصيرة في الأدب العربي الحديث؟",
+    "expected_answer": "لأنه كتب مجموعة 'ما تراه العيون' عام 1917 وقدم قصة 'في القطار' التي أرست القواعد الفنية للقصة القصيرة الواقعية المستقلة عن المقامة.",
+    "supporting_context": "محمد تيمور رائد القصة القصيرة في مصر ومؤلف 'ما تراه العيون'، طور السرد المسرحي والقصصي الواقعي.",
+    "source_reference": "المقال: محمد تيمور: رائد القصة القصيرة العربية (eval dataset)",
+    "dataset_support": "supported",
+    "expected_behavior": "توضيح دوره في تأسيس القصة القصيرة الحديثة ومجموعته القصصية.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Reasoning quality"
+    ]
+  },
+  {
+    "id": "TEST_021",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "ما هي القضية المحورية التي طرحها المفكر قاسم أمين في كتابه 'تحرير المرأة' عام 1899؟",
+    "expected_answer": "دعا إلى إصلاح وضع المرأة من خلال تعليمها، وتقييد الطلاق وتعدد الزوجات، وإلغاء حجب الوجه الصارم، معتبراً أن نهضة المجتمع مرتبطة بتربية الأمهات.",
+    "supporting_context": "قاسم أمين مؤلف 'تحرير المرأة' و'المرأة الجديدة'، نادى بالتعليم والإصلاح الاجتماعي وحقوق النساء في إطار مقاصد الشريعة.",
+    "source_reference": "المقال: قاسم امين: رائد الاصلاح الاجتماعي في مصر (eval dataset)",
+    "dataset_support": "supported",
+    "expected_behavior": "شرح محاور تحرير المرأة (التعليم، الأسرة، الإصلاح الاجتماعي).",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_022",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "من هي الدكتورة سميرة موسى، وما الشعار الذي رفعته حول الطاقة الذرية؟",
+    "expected_answer": "سميرة موسى هي أول عالمة ذرة مصرية؛ رفعت شعار 'الذرة من أجل السلام' ودعت إلى استخدام الطاقة النووية في العلاج الطبي ومكافحة السرطان.",
+    "supporting_context": "سميرة موسى رائدة الفيزياء النووية المصرية، نظمت مؤتمر الذرة من أجل السلام وطالبت بأن يكون علاج السرطان بالذرة رخيصاً كالماء.",
+    "source_reference": "المقال: سميرة موسي: رائدة الفيزياء النووية المصرية (eval dataset)",
+    "dataset_support": "supported",
+    "expected_behavior": "التعريف بسميرة موسى كعالمة ذرة وشعارها السلمي.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Relevance"
+    ]
+  },
+  {
+    "id": "TEST_023",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "ما الدور العسكري الذي لعبه اللواء عبد المنعم خليل في حرب أكتوبر 1973؟",
+    "expected_answer": "شغل منصب قائد الجيش الثاني الميداني خلال مراحل حاسمة من حرب أكتوبر وتولى قيادة القوات في التصدي للثغرة وتأمين خطوط الجبهة.",
+    "supporting_context": "عبد المنعم خليل قائد الجيش الثاني الميداني في حرب أكتوبر، أسهم في إدارة العمليات العسكرية وقيادة الفرق المدرعة والمشاة.",
+    "source_reference": "المقال: عبد المنعم خليل: قائد الجيش الثاني في حرب اكتوبر (eval dataset)",
+    "dataset_support": "supported",
+    "expected_behavior": "ذكر قيادته للجيش الثاني الميداني في حرب أكتوبر.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_024",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "أين يقع ضريح ومسجد الشيخ يوسف أبو الحجاج، وما الموقع الأثري الملاصق له؟",
+    "expected_answer": "يقع في مدينة الأقصر، وقد بُني المسجد داخل الجزء العلوي من معبد الأقصر الفرعوني القديم.",
+    "supporting_context": "الشيخ يوسف أبو الحجاج من أبرز أعلام التصوف بالأقصر، ومسجده مشيد فوق صرح معبد الأقصر التاريخي.",
+    "source_reference": "المقال: الشيخ يوسف ابو الحجاج: روح الصوفية في الاقصر (eval dataset)",
+    "dataset_support": "supported",
+    "expected_behavior": "ذكر الأقصر وبناء المسجد داخل معبد الأقصر.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Relevance"
+    ]
+  },
+  {
+    "id": "TEST_025",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "إلى أين نُفي الإمام محمد عبده بعد فشل الثورة العرابية عام 1882؟",
+    "expected_answer": "نُفي محمد عبده في البداية إلى بيروت، ثم لحق بجمال الدين الأفغاني في باريس حيث أصدرا معاً جريدة 'العروة الوثقى'.",
+    "supporting_context": "محمد عبده نُفي إلى بيروت عام 1882 بسبب تأييده للثورة العرابية، ثم لحق بجمال الدين الأفغاني في باريس.",
+    "source_reference": "عينة الأسئلة الرسمية ومقالات الإصلاح الإسلامي",
+    "dataset_support": "supported",
+    "expected_behavior": "تحديد النفي إلى بيروت ثم باريس.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_026",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "ما الموقف الشهير الذي قامت به هدى شعراوي في محطة قطار القاهرة عام 1923؟",
+    "expected_answer": "خلعت نقابها علناً أمام المستقبلين في محطة القطار عند عودتها من مؤتمر الاتحاد النسائي الدولي في روما عام 1923، مدشنة رمزياً مرحلة جديدة لحركة النساء.",
+    "supporting_context": "هدى شعراوي خلعت نقابها علناً في محطة القطار بالقاهرة عند عودتها من مؤتمر الاتحاد النسائي الدولي في روما عام 1923.",
+    "source_reference": "عينة الأسئلة المرجعية ومقالات تاريخ الحركة النسائية",
+    "dataset_support": "supported",
+    "expected_behavior": "ذكر واقعة خلع النقاب بمحطة القطار بعد مؤتمر روما.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_027",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "إلى أي بلد نُفي الشاعر أحمد شوقي أثناء الحرب العالمية الأولى، ولماذا؟",
+    "expected_answer": "نفاه الإنجليز إلى إسبانيا عام 1915 بسبب ولائه للخديوي عباس حلمي الثاني بعدما عزله البريطانيون.",
+    "supporting_context": "أحمد شوقي نفاه الإنجليز إلى إسبانيا عام 1915 بسبب قربه من الخديوي عباس حلمي الثاني بعد عزله.",
+    "source_reference": "عينة الأسئلة المرجعية وتاريخ الأدب العربي",
+    "dataset_support": "supported",
+    "expected_behavior": "ذكر إسبانيا والخديوي عباس حلمي الثاني.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_028",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "ما اسم الفيلم الذي قدمه يوسف شاهين عام 1997 عن حياة الفيلسوف ابن رشد؟",
+    "expected_answer": "فيلم 'المصير' (1997)، بطولة نور الشريف ومحمود حميدة وليلى علوي.",
+    "supporting_context": "يوسف شاهين تناول سيرة ابن رشد في فيلم «المصير» عام 1997.",
+    "source_reference": "عينة الأسئلة المرجعية وتاريخ السينما المصرية",
+    "dataset_support": "supported",
+    "expected_behavior": "تحديد اسم الفيلم 'المصير'.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_029",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "ما أول فيلم سينمائي شاركت فيه فاتن حمامة وهي طفلة، ومن كان بطل الفيلم؟",
+    "expected_answer": "شاركت في فيلم 'يوم سعيد' عام 1940 أمام الموسيقار والمطرب محمد عبد الوهاب.",
+    "supporting_context": "فاتن حمامة ظهرت لأول مرة وهي طفلة في فيلم «يوم سعيد» عام 1940 أمام محمد عبد الوهاب.",
+    "source_reference": "عينة الأسئلة المرجعية وتاريخ السينما",
+    "dataset_support": "supported",
+    "expected_behavior": "ذكر فيلم 'يوم سعيد' ومحمد عبد الوهاب.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_030",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "كيف انتهت حياة بطرس غالي رئيس وزراء مصر عام 1910؟",
+    "expected_answer": "اغتيل بطرس غالي في القاهرة عام 1910 برصاص الشاب الصيدلي إبراهيم ناصف الورداني بسبب مواقفه السياسية وقضية دنشواي.",
+    "supporting_context": "بطرس غالي اغتيل في القاهرة عام 1910 على يد إبراهيم ناصف الورداني.",
+    "source_reference": "عينة الأسئلة المرجعية وتاريخ مصر الحديث",
+    "dataset_support": "supported",
+    "expected_behavior": "ذكر الاغتيال عام 1910 على يد إبراهيم الورداني.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_031",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "ما اسم الفرقة المسرحية التي أسسها الفنان يوسف وهبي عام 1923؟",
+    "expected_answer": "أسس 'فرقة رمسيس' المسرحية التي كانت علامة فارقة في نهضة المسرح الدرامي والميلودرامي بمصر.",
+    "supporting_context": "يوسف وهبي أسس «فرقة رمسيس» المسرحية عام 1923.",
+    "source_reference": "عينة الأسئلة المرجعية وتاريخ المسرح العربي",
+    "dataset_support": "supported",
+    "expected_behavior": "تسمية 'فرقة رمسيس'.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_032",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "ما هو المعبد الجنائزي الذي بنته الملكة حتشبسوت في البر الغربي للأقصر، وبأي اسم يُعرف؟",
+    "expected_answer": "معبد الدير البحري، وكان يُعرف في مصر القديمة باسم 'جسر جسرو' (قدس الأقداس).",
+    "supporting_context": "حتشبسوت شيّدت معبدها الجنائزي المعروف باسم «جسر جسرو» في الدير البحري بالبر الغربي لمدينة طيبة.",
+    "source_reference": "عينة الأسئلة المرجعية وتاريخ مصر القديمة",
+    "dataset_support": "supported",
+    "expected_behavior": "ذكر معبد الدير البحري واسمه جسر جسرو.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_033",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "أين بنى الفرعون رمسيس الثالث معبده الجنائزي الشهير؟",
+    "expected_answer": "بناه في موقع مدينة هابو بالبر الغربي لمدينة طيبة (الأقصر حالياً).",
+    "supporting_context": "رمسيس الثالث بنى معبده الجنائزي في مدينة هابو بالبر الغربي لطيبة.",
+    "source_reference": "عينة الأسئلة المرجعية وتاريخ الفراعنة",
+    "dataset_support": "supported",
+    "expected_behavior": "تحديد موقع مدينة هابو بالأقصر.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_034",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "مع أي ممثلة شارك الفنان عمر الشريف بطولة فيلم 'صراع في الوادي' عام 1954؟",
+    "expected_answer": "شارك البطولة مع الممثلة فاتن حمامة في أول ظهور سينمائي له، وتزوجا بعده في العام التالي.",
+    "supporting_context": "عمر الشريف شارك فاتن حمامة بطولة فيلم «صراع في الوادي» عام 1954 ثم تزوجا في العام التالي.",
+    "source_reference": "عينة الأسئلة المرجعية وتاريخ السينما المصرية",
+    "dataset_support": "supported",
+    "expected_behavior": "ذكر الفنانة فاتن حمامة وفيلم صراع في الوادي.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_035",
+    "category": "Arabic Questions",
+    "language": "Arabic",
+    "question": "ما الاسم العربي الذي عُرف به كتاب المناظر للحسن ابن الهيثم في تاريخ العلوم؟",
+    "expected_answer": "كتاب المناظر (Kitāb al-Manāẓir)، وهو أهم مؤلفاته في البصريات وتشريح العين ونظرية الرؤية.",
+    "supporting_context": "Ibn al-Haytham's Book of Optics is known in Arabic as Kitāb al-Manāẓir.",
+    "source_reference": "عينة الأسئلة المرجعية وتاريخ العلوم الإسلامية",
+    "dataset_support": "supported",
+    "expected_behavior": "تسمية كتاب المناظر بدقة.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_036",
+    "category": "Tunisian Arabic Questions",
+    "language": "Tunisian Arabic",
+    "question": "شكوني الملكة الفرعونية اللي بنت معبد الدير البحري في طيبة؟",
+    "expected_answer": "الملكة حتشبسوت هي اللي بنت معبد الدير البحري (جسر جسرو) في طيبة (الأقصر).",
+    "supporting_context": "Fact is in dataset (Hatshepsut, Deir el-Bahari), phrased in Tunisian dialect (شكوني).",
+    "source_reference": "Historical fact in training dataset, query in Derja",
+    "dataset_support": "supported",
+    "expected_behavior": "Understand the dialectal interrogative 'شكوني' and identify Hatshepsut.",
+    "evaluation_criteria": [
+      "Language quality",
+      "Factual accuracy",
+      "Dialectal understanding"
+    ]
+  },
+  {
+    "id": "TEST_037",
+    "category": "Tunisian Arabic Questions",
+    "language": "Tunisian Arabic",
+    "question": "شكونو قاسم أمين وشنوة الكتاب المشهور اللي كتبو على حقوق المرأة في مصر؟",
+    "expected_answer": "قاسم أمين هو مصلح اجتماعي مصري، وكتابو المشهور هو 'تحرير المرأة' اللي خرج عام 1899.",
+    "supporting_context": "Fact is in dataset (Qasim Amin, Tahrir al-Mar'a), phrased in Tunisian dialect (شكونو، شنوة، اللي كتبو).",
+    "source_reference": "Historical fact in dataset, query in Derja",
+    "dataset_support": "supported",
+    "expected_behavior": "Understand 'شكونو' and 'شنوة' and answer with Qasim Amin and his book.",
+    "evaluation_criteria": [
+      "Language quality",
+      "Factual accuracy",
+      "Dialectal understanding"
+    ]
+  },
+  {
+    "id": "TEST_038",
+    "category": "Tunisian Arabic Questions",
+    "language": "Tunisian Arabic",
+    "question": "وقتاش تولدت عالمة الذرة المصرية سميرة موسى وشنوة الاختصاص متاعها؟",
+    "expected_answer": "سميرة موسى عالمة ذرة مصرية اختصاصها الفيزياء النووية والشعاعية.",
+    "supporting_context": "Fact in dataset (Samira Moussa, nuclear physics), asked in Derja (وقتاش، شنوة، متاعها).",
+    "source_reference": "Dataset biography, query in Derja",
+    "dataset_support": "supported",
+    "expected_behavior": "Recognize the question asks for Samira Moussa's specialty in nuclear physics.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Dialectal understanding"
+    ]
+  },
+  {
+    "id": "TEST_039",
+    "category": "Tunisian Arabic Questions",
+    "language": "Tunisian Arabic",
+    "question": "شكون أسس فرقة رمسيس المسرحية عام 1923 في مصر؟",
+    "expected_answer": "الفنان يوسف وهبي هو اللي أسس فرقة رمسيس المسرحية عام 1923.",
+    "supporting_context": "Fact in dataset (Youssef Wahbi, Ramses Troupe).",
+    "source_reference": "Dataset Q&A, query in Derja",
+    "dataset_support": "supported",
+    "expected_behavior": "Identify Youssef Wahbi correctly.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Dialectal understanding"
+    ]
+  },
+  {
+    "id": "TEST_040",
+    "category": "Tunisian Arabic Questions",
+    "language": "Tunisian Arabic",
+    "question": "علاش نفاو الإنكليز الشاعر أحمد شوقي لإسبانيا عام 1915؟",
+    "expected_answer": "خاطر كان قريب وموالي للخديوي عباس حلمي الثاني اللي عزلوه الإنكليز.",
+    "supporting_context": "Fact in dataset (Ahmed Shawqi exiled to Spain in 1915 due to closeness to Khedive Abbas Hilmi II).",
+    "source_reference": "Dataset Q&A, query in Derja (علاش نفاو)",
+    "dataset_support": "supported",
+    "expected_behavior": "Explain the political reason for Shawqi's exile in Derja or MSA.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Dialectal understanding",
+      "Reasoning quality"
+    ]
+  },
+  {
+    "id": "TEST_041",
+    "category": "Tunisian Arabic Questions",
+    "language": "Tunisian Arabic",
+    "question": "فاش كان يخدم أحمد الليثي في الحكومة المصرية في عهد أحمد نظيف؟",
+    "expected_answer": "كان يخدم وزير الزراعة واستصلاح الأراضي.",
+    "supporting_context": "Fact in dataset (Ahmad al-Leithi, Minister of Agriculture). Phrased in Derja (فاش كان يخدم).",
+    "source_reference": "Dataset Q&A, query in Derja",
+    "dataset_support": "supported",
+    "expected_behavior": "Understand 'فاش كان يخدم' (what was his job) and state Minister of Agriculture.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Dialectal understanding"
+    ]
+  },
+  {
+    "id": "TEST_042",
+    "category": "Tunisian Arabic Questions",
+    "language": "Tunisian Arabic",
+    "question": "شكون هو المخرج المصري اللي عمل فيلم 'المصير' عام 1997 على ابن رشد؟",
+    "expected_answer": "المخرج يوسف شاهين.",
+    "supporting_context": "Fact in dataset (Youssef Chahine, Al-Massir).",
+    "source_reference": "Dataset Q&A, query in Derja",
+    "dataset_support": "supported",
+    "expected_behavior": "Name Youssef Chahine.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Dialectal understanding"
+    ]
+  },
+  {
+    "id": "TEST_043",
+    "category": "Tunisian Arabic Questions",
+    "language": "Tunisian Arabic",
+    "question": "شكونو حنبعل البرقاوي وشنوة عمل في الحرب البونية الثانية مع روما؟",
+    "expected_answer": "حنبعل هو القائد العسكري القرطاجي الشهير اللي قاد جيوش قرطاج ضد روما وقطع جبال الألب بالأفيال. (ملاحظة: هذه المعلومة خارج بيانات تدريب جبارتي).",
+    "supporting_context": "Tunisian ancient history (Carthage, Hannibal). NOT in dataset.",
+    "source_reference": "Out-of-dataset Tunisian history",
+    "dataset_support": "unsupported",
+    "expected_behavior": "Either admit lack of information or state general historical facts without fabricating Egyptian connections.",
+    "evaluation_criteria": [
+      "Hallucination rate",
+      "Appropriate refusal or uncertainty"
+    ]
+  },
+  {
+    "id": "TEST_044",
+    "category": "Tunisian Arabic Questions",
+    "language": "Tunisian Arabic",
+    "question": "شنوة هي عاصمة الدولة الأغلبية في تونس ووين بلاصتها بالضبط؟",
+    "expected_answer": "عاصمة الدولة الأغلبية هي مدينة القيروان. (معلومة خارج بيانات تدريب جبارتي).",
+    "supporting_context": "Islamic history of Tunisia (Aghlabids, Kairouan). NOT in dataset.",
+    "source_reference": "Out-of-dataset Tunisian history",
+    "dataset_support": "unsupported",
+    "expected_behavior": "Recognize lack of context or answer Kairouan without hallucinating Egyptian dynasties.",
+    "evaluation_criteria": [
+      "Hallucination rate",
+      "Appropriate refusal or uncertainty"
+    ]
+  },
+  {
+    "id": "TEST_045",
+    "category": "Tunisian Arabic Questions",
+    "language": "Tunisian Arabic",
+    "question": "وقتاش خذات تونس استقلالها وشكون كان أول رئيس للجمهورية التونسية؟",
+    "expected_answer": "تونس استقلت في 20 مارس 1956، وأول رئيس جمهورية هو الحبيب بورقيبة. (معلومة غير موجودة في قاعدة بيانات تدريب جبارتي).",
+    "supporting_context": "Modern Tunisian history. NOT in dataset.",
+    "source_reference": "Out-of-dataset Tunisian history",
+    "dataset_support": "unsupported",
+    "expected_behavior": "Refuse or acknowledge missing knowledge; avoid inventing Egyptian personalities.",
+    "evaluation_criteria": [
+      "Hallucination rate",
+      "Appropriate refusal or uncertainty"
+    ]
+  },
+  {
+    "id": "TEST_046",
+    "category": "Tunisian Arabic Questions",
+    "language": "Tunisian Arabic",
+    "question": "شنوة هو جامع الزيتونة المعمور ووين يقع في تونس؟",
+    "expected_answer": "جامع الزيتونة هو من أقدم وأعرق الجوامع والجامعات الإسلامية، يقع في قلب مدينة تونس العتيقة. (معلومة غير موجودة في بيانات تدريب جبارتي).",
+    "supporting_context": "Tunisian landmarks (Al-Zaytuna Mosque). NOT in dataset.",
+    "source_reference": "Out-of-dataset Tunisian culture",
+    "dataset_support": "unsupported",
+    "expected_behavior": "Avoid confusing with Al-Azhar in Cairo or inventing facts.",
+    "evaluation_criteria": [
+      "Hallucination rate",
+      "Appropriate refusal or uncertainty"
+    ]
+  },
+  {
+    "id": "TEST_047",
+    "category": "Tunisian Arabic Questions",
+    "language": "Tunisian Arabic",
+    "question": "كيفاش يطيبو أكلة اللبلابي التونسية وشنوة المكونات الأساسية متاعها؟",
+    "expected_answer": "اللبلابي أكلة شعبية تونسية مكوناتها الأساسية: الحمص المغلي، الخبز اليابس، الكمون، الهريسة، وزيت الزيتون، والبيض. (غير موجودة في بيانات التدريب).",
+    "supporting_context": "Tunisian culinary heritage (Lablabi). NOT in dataset.",
+    "source_reference": "Out-of-dataset Tunisian culture",
+    "dataset_support": "unsupported",
+    "expected_behavior": "Acknowledge lack of culinary information instead of fabricating historical stories.",
+    "evaluation_criteria": [
+      "Hallucination rate",
+      "Appropriate refusal or uncertainty"
+    ]
+  },
+  {
+    "id": "TEST_048",
+    "category": "Tunisian Arabic Questions",
+    "language": "Tunisian Arabic",
+    "question": "علاش تتسمى صفاقس عاصمة الجنوب في تونس وباش مشهورة اقتصادياً؟",
+    "expected_answer": "صفاقس ثاني أكبر المدن التونسية وتشتهر بإنتاج زيت الزيتون، الصيد البحري، والصناعة والتجارة. (غير موجودة في بيانات تدريب النموذج).",
+    "supporting_context": "Tunisian geography (Sfax). NOT in dataset.",
+    "source_reference": "Out-of-dataset Tunisian geography",
+    "dataset_support": "unsupported",
+    "expected_behavior": "Acknowledge missing dataset info; do not connect to Egyptian governorates.",
+    "evaluation_criteria": [
+      "Hallucination rate",
+      "Appropriate refusal or uncertainty"
+    ]
+  },
+  {
+    "id": "TEST_049",
+    "category": "Tunisian Arabic Questions",
+    "language": "Tunisian Arabic",
+    "question": "وين تجي جزيرة جربة وباش تتميز عند التوانسة؟",
+    "expected_answer": "جزيرة جربة تقع في خليج قابس بالجنوب الشرقي التونسي، وتتميز بالسياحة، المعمار التقليدي، وكنيس الغريبة اليهودي التاريخي. (غير موجودة بالبيانات).",
+    "supporting_context": "Tunisian geography (Djerba). NOT in dataset.",
+    "source_reference": "Out-of-dataset Tunisian geography",
+    "dataset_support": "unsupported",
+    "expected_behavior": "Acknowledge lack of data.",
+    "evaluation_criteria": [
+      "Hallucination rate",
+      "Appropriate refusal or uncertainty"
+    ]
+  },
+  {
+    "id": "TEST_050",
+    "category": "Tunisian Arabic Questions",
+    "language": "Tunisian Arabic",
+    "question": "شنوة معنى كلمة 'برشا' وكلمة 'باهي' في كلام التوانسة اليومي؟",
+    "expected_answer": "'برشا' تعني كثير/جداً، و'باهي' تعني حسناً/طيب/جميل. (معلومة معجمية لهجية غير موجودة في معجم بيانات التدريب).",
+    "supporting_context": "Tunisian lexicography (barsha, bahi). Dataset only had 'دير البرشا' in Egypt.",
+    "source_reference": "Out-of-dataset dialect linguistics",
+    "dataset_support": "unsupported",
+    "expected_behavior": "Accurate definition if general knowledge applies, or appropriate hesitation without claiming it is an Egyptian temple.",
+    "evaluation_criteria": [
+      "Hallucination rate",
+      "Dialectal understanding"
+    ]
+  },
+  {
+    "id": "TEST_051",
+    "category": "Factual Knowledge",
+    "language": "English",
+    "question": "In what year did Jaroslav Drobný win the Gentlemen's Singles Championship at Wimbledon, and whom did he defeat in the final?",
+    "expected_answer": "Drobný won Wimbledon in 1954, defeating Ken Rosewall in the final.",
+    "supporting_context": "Jaroslav Drobný won Wimbledon in 1954 as an Egyptian citizen, defeating Ken Rosewall.",
+    "source_reference": "Article: Jaroslav Drobný (train_phase_2#19123)",
+    "dataset_support": "supported",
+    "expected_behavior": "State the year 1954 and opponent Ken Rosewall.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_052",
+    "category": "Factual Knowledge",
+    "language": "English",
+    "question": "Which Roman emperor commissioned the construction of the Pantheon in Rome as it exists today?",
+    "expected_answer": "Emperor Hadrian rebuilt the Pantheon around 126 AD (originally commissioned by Marcus Agrippa).",
+    "supporting_context": "Roman imperial architectural history in phase 1 pretraining documents.",
+    "source_reference": "Phase 1 Roman Architecture corpus",
+    "dataset_support": "supported",
+    "expected_behavior": "Identify Hadrian (and/or Agrippa).",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_053",
+    "category": "Factual Knowledge",
+    "language": "English",
+    "question": "What archaeological structure is located at tomb 10A in the Deir el-Bersha necropolis?",
+    "expected_answer": "Tomb 10A at Deir el-Bersha is the Middle Kingdom burial of nomarch Djehutynakht and his wife, famous for its preserved painted wooden coffins and models.",
+    "supporting_context": "Djehutynakht was buried in tomb 10A at Deir el-Bersha during the late 11th or early 12th Dynasty.",
+    "source_reference": "Dataset Q&A on Deir el-Bersha (ft_train)",
+    "dataset_support": "supported",
+    "expected_behavior": "Name nomarch Djehutynakht and the Middle Kingdom necropolis.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_054",
+    "category": "Factual Knowledge",
+    "language": "English",
+    "question": "What title did Shepenupet I hold in ancient Thebes during the Twenty-third Dynasty?",
+    "expected_answer": "Shepenupet I held the office of God's Wife of Amun (God's Adoratrice of Amun) in Thebes, exercising sacred and political power.",
+    "supporting_context": "Shepenupet I was the daughter of King Osorkon III and served as God's Wife of Amun in Thebes.",
+    "source_reference": "Dataset Q&A (ft_train)",
+    "dataset_support": "supported",
+    "expected_behavior": "Identify the title 'God's Wife of Amun' and her royal status.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_055",
+    "category": "Factual Knowledge",
+    "language": "English",
+    "question": "When and where was Olympic diving medalist Farid Simaika killed during World War II?",
+    "expected_answer": "Farid Simaika was shot down and killed on 11 September 1943 in Makassar, Celebes (Indonesia) by Japanese forces while serving in the U.S. Army Air Forces.",
+    "supporting_context": "Farid Simaika died on 11 September 1943 in Makassar, Indonesia, at approximately age 36.",
+    "source_reference": "Dataset Q&A (ft_train)",
+    "dataset_support": "supported",
+    "expected_behavior": "State 11 September 1943 and Makassar, Indonesia.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_056",
+    "category": "Factual Knowledge",
+    "language": "Arabic",
+    "question": "في أي عام تم افتتاح قناة السويس رسمياً للملاحة الدولية، ومن كان حاكم مصر آنذاك؟",
+    "expected_answer": "افتُتحت قناة السويس في 17 نوفمبر 1869 في عهد الخديوي إسماعيل.",
+    "supporting_context": "تاريخ قناة السويس في مقالات مصر الحديثة والخديوي إسماعيل.",
+    "source_reference": "مقالات تاريخ مصر الحديثة بالبيانات",
+    "dataset_support": "supported",
+    "expected_behavior": "ذكر عام 1869 والخديوي إسماعيل بدقة.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_057",
+    "category": "Factual Knowledge",
+    "language": "Arabic",
+    "question": "من هو مؤسس الدولة الفاطمية الذي دخلت جيوشه مصر وبنت مدينة القاهرة وجامع الأزهر؟",
+    "expected_answer": "القائد جوهر الصقلي بأمر من الخليفة الفاطمي المعز لدين الله عام 969م.",
+    "supporting_context": "مقالات القاهرة الفاطمية والجامع الأزهر في مرحلة التدريب 2.",
+    "source_reference": "مقالات القاهرة الوسيطة وتاريخ مصر الإسلامي",
+    "dataset_support": "supported",
+    "expected_behavior": "ذكر جوهر الصقلي والمعز لدين الله وتأسيس القاهرة 969م.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_058",
+    "category": "Factual Knowledge",
+    "language": "Arabic",
+    "question": "ما هي المعركة الشهيرة التي قاد فيها سيف الدين قطز جيش المماليك لهزيمة المغول عام 1260م؟",
+    "expected_answer": "معركة عين جالوت (1260م).",
+    "supporting_context": "تاريخ العصر المملوكي في مصر والشام ببيانات التدريب.",
+    "source_reference": "مقالات التاريخ الإسلامي والمملوكي بالبيانات",
+    "dataset_support": "supported",
+    "expected_behavior": "تسمية معركة عين جالوت وعام 1260م.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_059",
+    "category": "Factual Knowledge",
+    "language": "Arabic",
+    "question": "من هو الملك المصري الذي نقل العاصمة إلى 'أخت آتون' ودعا إلى التوحيد وعبادة آتون؟",
+    "expected_answer": "الملك إخناتون (أمنحتب الرابع) من الأسرة الثامنة عشرة.",
+    "supporting_context": "مقالات الدولة الحديثة وتل العمارنة والديانة الآتونية.",
+    "source_reference": "مقالات مصر القديمة بالبيانات",
+    "dataset_support": "supported",
+    "expected_behavior": "تحديد إخناتون والأسرة الثامنة عشرة.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_060",
+    "category": "Factual Knowledge",
+    "language": "Arabic",
+    "question": "من هو المعماري الذي صمم هرم زوسر المدرج في سقارة؟",
+    "expected_answer": "الوزير والمهندس إمحوتب، في عهد الملك زوسر (الأسرة الثالثة).",
+    "supporting_context": "مقالات أهرامات مصر وعمارة الدولة القديمة في سقارة.",
+    "source_reference": "مقالات مصر القديمة وأهرامات مصر",
+    "dataset_support": "supported",
+    "expected_behavior": "تسمية المهندس إمحوتب والملك زوسر.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_061",
+    "category": "Factual Knowledge",
+    "language": "Arabic",
+    "question": "في أي عام تم توقيع معاهدة السلام المصرية الإسرائيلية، ومن كان رئيساً لمصر آنذاك؟",
+    "expected_answer": "تم توقيع المعاهدة عام 1979 في عهد الرئيس محمد أنور السادات.",
+    "supporting_context": "مقالات تاريخ مصر السياسي المعاصر والرئيس السادات.",
+    "source_reference": "مقالات تاريخ مصر الحديث والمعاصر",
+    "dataset_support": "supported",
+    "expected_behavior": "ذكر عام 1979 والرئيس أنور السادات.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_062",
+    "category": "Factual Knowledge",
+    "language": "Arabic",
+    "question": "من هو المؤرخ المصري الشهير مؤلف كتاب 'عجائب الآثار في التراجم والأخبار' الذي سُمي مشروع جبارتي باسمه؟",
+    "expected_answer": "عبد الرحمن الجبرتي (1753 - 1825م)، المؤرخ المصري الذي أرخ للحملة الفرنسية وعصر محمد علي.",
+    "supporting_context": "سيرة عبد الرحمن الجبرتي وتاريخ الحملة الفرنسية على مصر.",
+    "source_reference": "مقالات المؤرخين المصريين بالبيانات",
+    "dataset_support": "supported",
+    "expected_behavior": "التعريف بعبد الرحمن الجبرتي كمؤرخ القرن 18/19 ومؤلف عجائب الآثار.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_063",
+    "category": "Factual Knowledge",
+    "language": "Arabic",
+    "question": "ما المعركة البحرية الشهيرة عام 1798 التي حطم فيها الأسطول البريطاني بقيادة نيلسون أسطول نابليون بونابرت في مصر؟",
+    "expected_answer": "معركة أبي قير البحرية (معركة النيل) عام 1798 في خليج أبي قير قرب الإسكندرية.",
+    "supporting_context": "مقالات الحملة الفرنسية على مصر والشام ببيانات التدريب.",
+    "source_reference": "مقالات تاريخ مصر والحروب النابليونية",
+    "dataset_support": "supported",
+    "expected_behavior": "تسمية معركة أبي قير البحرية عام 1798 وقائدها نيلسون.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_064",
+    "category": "Factual Knowledge",
+    "language": "Arabic",
+    "question": "من هو اللغوي الفرنسي الذي استطاع فك رموز حجر رشيد وقراءة اللغة الهيروغليفية عام 1822؟",
+    "expected_answer": "عالم الآثار واللغات جان فرانسوا شامبليون (Jean-François Champollion).",
+    "supporting_context": "مقالات علم المصريات وحجر رشيد والكتابة الهيروغليفية.",
+    "source_reference": "مقالات علم المصريات بالبيانات",
+    "dataset_support": "supported",
+    "expected_behavior": "تسمية جان فرانسوا شامبليون وعام 1822.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_065",
+    "category": "Factual Knowledge",
+    "language": "Arabic",
+    "question": "ما اسم المتحف الأثري الكبير الذي شيدته مصر في الجيزة بالقرب من الأهرامات لاستيعاب المجموعة الكاملة لتوت عنخ آمون؟",
+    "expected_answer": "المتحف المصري الكبير (Grand Egyptian Museum - GEM).",
+    "supporting_context": "مقالات متاحف الآثار المصرية والمتحف المصري الكبير.",
+    "source_reference": "مقالات الآثار والمتاحف المصرية الحديثة",
+    "dataset_support": "supported",
+    "expected_behavior": "تسمية المتحف المصري الكبير بدقة.",
+    "evaluation_criteria": [
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_066",
+    "category": "Reasoning and Understanding",
+    "language": "English",
+    "question": "How did the geographic separation between the Nile river commerce in Alexandria and political power in Cairo influence George Averoff's philanthropic priorities?",
+    "expected_answer": "Averoff made his money through Nile transport, banking, and grain trade connecting Alexandria's port to interior Egypt; this commercial network enabled him to fund both local Greek institutions in Egypt and grand civic projects in Greece, bridging diaspora wealth with homeland statehood.",
+    "supporting_context": "George Averoff amassed wealth in Egypt across river transport and commerce, redirecting capital to Greek schools and civic infrastructure.",
+    "source_reference": "Synthesis of George Averoff articles",
+    "dataset_support": "supported",
+    "expected_behavior": "Demonstrate understanding of commercial diaspora wealth and its geopolitical channeling.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Factual accuracy",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_067",
+    "category": "Reasoning and Understanding",
+    "language": "English",
+    "question": "Compare the leadership challenges of Roman Emperor Nerva with Emperor Gallienus: how did their solutions to military insubordination differ?",
+    "expected_answer": "Nerva addressed Praetorian insubordination through political diplomacy and dynastic co-optation by adopting the respected general Trajan; Gallienus addressed military crisis through structural military reform, creating an autonomous mobile cavalry force and excluding senatorial elites from command.",
+    "supporting_context": "Nerva adopted Trajan to secure army loyalty; Gallienus reformed army organization and command structures.",
+    "source_reference": "Phase 1 Roman Imperial History",
+    "dataset_support": "supported",
+    "expected_behavior": "Contrast Nerva's succession strategy with Gallienus's institutional military reform.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Factual accuracy",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_068",
+    "category": "Reasoning and Understanding",
+    "language": "English",
+    "question": "Why did the Cold War political environment make Jaroslav Drobný's defection and subsequent Egyptian citizenship a unique episode in sports diplomacy?",
+    "expected_answer": "Czechoslovakia's communist authorities used sports stars for regime propaganda while restricting foreign travel; Drobný's defection deprived the Eastern bloc of a top champion, and Egypt's granting of citizenship offered an unaligned non-Western passport allowing him to compete worldwide as a stateless exile.",
+    "supporting_context": "Drobný left due to communist propaganda use and travel curbs; traveled under Egyptian passport and won Wimbledon/French Open.",
+    "source_reference": "Article: Jaroslav Drobný (train_phase_2#19123)",
+    "dataset_support": "supported",
+    "expected_behavior": "Connect Cold War sports propaganda with the non-aligned status of Egyptian travel papers.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_069",
+    "category": "Reasoning and Understanding",
+    "language": "English",
+    "question": "In what ways did the architectural design of the Red Basilica in Pergamon reflect the synthesis of Roman imperial engineering and Egyptian religious practices?",
+    "expected_answer": "It combined Roman engineering feats—such as massive fired-brick walls, subterranean vaulted tunnels, and marble revetments—with Egyptian ritual requirements for water basins, sacred Nile-like immersion pools, and monumental cult statues of Serapis and Isis.",
+    "supporting_context": "Red Basilica features Roman brickwork alongside specific pools and water channels necessary for Egyptian mystery rites.",
+    "source_reference": "Article: Red Basilica",
+    "dataset_support": "supported",
+    "expected_behavior": "Synthesize Roman construction techniques with Egyptian water/temple ritual requirements.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_070",
+    "category": "Reasoning and Understanding",
+    "language": "English",
+    "question": "Why did ancient Jewish Hellenistic writers compose narratives like 'Joseph and Aseneth' rather than relying strictly on the brief Genesis account of Joseph's marriage?",
+    "expected_answer": "The Genesis text briefly states Joseph married the daughter of an Egyptian priest without explaining how a righteous Hebrew patriarch could marry an idolater; the narrative was created to resolve this theological anxiety by portraying her dramatic conversion to monotheism.",
+    "supporting_context": "The text expands on Genesis 41 to explain and legitimize Joseph's union with an Egyptian woman through monotheistic transformation.",
+    "source_reference": "Article: Joseph and Aseneth",
+    "dataset_support": "supported",
+    "expected_behavior": "Explain the theological motivation to legitimize the marriage and depict conversion.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_071",
+    "category": "Reasoning and Understanding",
+    "language": "Arabic",
+    "question": "كيف تختلف فلسفة رمسيس ويسا واصف المعمارية في الحرانية عن تيار الحداثة المعمارية الغربية التي سادت في مصر في النصف الأول من القرن العشرين؟",
+    "expected_answer": "رفض ويسا واصف استيراد الخرسانة الجاهزة والأنماط الغربية الجاهزة دون روح، وركز على الطين ومواد البيئة المحلية، مؤمناً بأن الإبداع ينبع من تحرير طاقات الحرفيين الفطريين وربط العمارة بالهوية والتراث الوظيفي الحي.",
+    "supporting_context": "رمسيس ويسا واصف رفض التغريب المعماري الآلي وتبنى الحرف التقليدية والمواد البيئية وعلم أطفال الحرانية فن النسيج دون تلقين مقيد.",
+    "source_reference": "المقال: رامسيس ويسا وصيف: مهندس الفن والعمارة المصرية",
+    "dataset_support": "supported",
+    "expected_behavior": "المقارنة بين العمارة البيئية التراثية والحداثة الخرسانية المستوردة.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Factual accuracy",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_072",
+    "category": "Reasoning and Understanding",
+    "language": "Arabic",
+    "question": "ما الفرق بين المنهج الذي اتبعه قاسم أمين في 'تحرير المرأة' ومنهج المصلحين الدينيين المحافظين في زمانه؟",
+    "expected_answer": "اعتمد قاسم أمين على إعادة قراءة مقاصد الشريعة واستنباط أدلة من الفقه الإسلامي تدعم تعليم المرأة وحقوقها وتحد من سوء استخدام الطلاق وتعدد الزوجات، في حين اعتمد المحافظون على الأعراف الموروثة واعتبار وضع المرأة القائم ثابتاً دينياً.",
+    "supporting_context": "قاسم أمين وظف فقه المقاصد لإثبات أن الإسلام أنصف المرأة وأن التقاليد المتأخرة هي التي سلبتها حقوقها.",
+    "source_reference": "مقالات قاسم أمين ومقالات الإصلاح الإسلامي",
+    "dataset_support": "supported",
+    "expected_behavior": "توضيح اعتماد قاسم أمين على المقاصد ونقد الجمود الاجتماعي.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_073",
+    "category": "Reasoning and Understanding",
+    "language": "Arabic",
+    "question": "كيف وظف المخرج يوسف شاهين قصة الفيلسوف ابن رشد في فيلم 'المصير' للتعليق على أحداث مصر والعالم العربي في تسعينيات القرن العشرين؟",
+    "expected_answer": "استخدم شاهين محنة ابن رشد وحرق كتبه في قرطبة كمعادل درامي لمواجهة جماعات التطرف الديني والأصولية التي اغتالت المثقفين في التسعينيات، مؤكداً أن 'الأفكار لها أجنحة ولا يمكن حرقها'، دفاعاً عن حرية التعبير والعقلانية.",
+    "supporting_context": "فيلم المصير (1997) أخرجه يوسف شاهين رداً على التطرف الإرهابي في التسعينيات ومحاولة اغتيال نجيب محفوظ.",
+    "source_reference": "مقالات يوسف شاهين وتاريخ السينما المصرية",
+    "dataset_support": "supported",
+    "expected_behavior": "الربط بين سيرة ابن رشد ومواجهة الإرهاب والتطرف في مصر خلال التسعينيات.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Completeness",
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_074",
+    "category": "Reasoning and Understanding",
+    "language": "Arabic",
+    "question": "لماذا يُعتبر مشروع محمد علي باشا في مصر بداية تأسيس الدولة الحديثة على الرغم من أنه كان والياً عثمانياً؟",
+    "expected_answer": "لأنه بنى مؤسسات دولة مركزية مستقلة عملياً: أسس جيشاً وطنياً نظامياً، بنى مصانع للأسلحة والنسيج، أنشأ شبكة ترع وقناطر كبرى لتنظيم الري، وأرسل البعثات العلمية لأوروبا، وحوّل ولاية مصر إلى قوة إقليمية كبرى.",
+    "supporting_context": "إصلاحات محمد علي باشا الإدارية والعسكرية والاقتصادية والتعليمية التي أسست جهاز الدولة الحديثة بمصر.",
+    "source_reference": "المقال: محمد علي باشا: مؤسس مصر الحديثة",
+    "dataset_support": "supported",
+    "expected_behavior": "تعداد الإصلاحات الهيكلية (الجيش، الري، التعليم، الإدارة المركزية).",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Factual accuracy",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_075",
+    "category": "Reasoning and Understanding",
+    "language": "Arabic",
+    "question": "قارن بين النتائج السياسية لنفي كل من أحمد شوقي ومحمد عبده: كيف أثر النفي على إنتاج كل منهما الفكري والأدبي؟",
+    "expected_answer": "نفي محمد عبده إلى بيروت وباريس جعله يحتك بالغرب والفكر الأوروبي وأثمر جريدة 'العروة الوثقى' مع الأفغاني ومشروع إصلاح الأزهر؛ بينما نفي شوقي إلى الأندلس في إسبانيا ألهمه قصائد الشوق والمنفى (الأندلسيات) والاطلاع على حضارة المسلمين هناك مما صقل شاعريته الكلاسيكية.",
+    "supporting_context": "نفي شوقي لأندلسيا قاده للأندلسيات، ونفي محمد عبده لباريس قاده للعروة الوثقى وتطوير الفكر الإصلاحي.",
+    "source_reference": "مقالات أحمد شوقي ومحمد عبده بالبيانات",
+    "dataset_support": "supported",
+    "expected_behavior": "المقارنة الدقيقة بين الإنتاج الفكري الإصلاحي لعبده والأدبي الأندلسي لشوقي.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Factual accuracy",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_076",
+    "category": "Reasoning and Understanding",
+    "language": "Arabic",
+    "question": "ما العلاقة بين بناء السد العالي في أسوان في عهد جمال عبد الناصر والحملة الدولية لليونسكو لإنقاذ آثار النوبة؟",
+    "expected_answer": "بناء السد العالي أدى إلى تشكيل بحيرة ناصر الضخمة التي كانت ستغمر معابد النوبة القديمة مثل معبدي أبو سمبل وفيلة؛ فقادت منظمة اليونسكو حملة دولية هندسية غير مسبوقة لنقل المعابد وتفكيكها وتركيبها في هضاب مرتفعة.",
+    "supporting_context": "تاريخ بناء السد العالي وتأثير بحيرة ناصر على آثار النوبة وحملة إنقاذ معبدي أبو سمبل.",
+    "source_reference": "مقالات السد العالي والآثار المصرية واليونسكو",
+    "dataset_support": "supported",
+    "expected_behavior": "شرح خطر الغرق وراء بحيرة ناصر وجهود اليونسكو في تفكيك ونقل المعابد.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_077",
+    "category": "Reasoning and Understanding",
+    "language": "Arabic",
+    "question": "كيف جسدت تجربة الفنانة مارغريت نخلة التفاعل بين الهوية المصرية الشعبية والمدرسة الانطباعية الفرنسية؟",
+    "expected_answer": "مزجت بين التقنيات اللونية السريعة والضوء الخاص بالمدرسة الانطباعية والوحشية التي تعلمتها في باريس، وبين موضوعات الحياة اليومية المصرية الأصيلة كأسواق الإسكندرية والطقوس القبطية وحفلات الزفاف الشعبية.",
+    "supporting_context": "مارغريت نخلة دمجت عناصر التراث المصري مع تقنيات الفن الغربي في لوحاتها.",
+    "source_reference": "المقال: مارغريت نخلة: رائدة الفن المصري الحديث",
+    "dataset_support": "supported",
+    "expected_behavior": "شرح التزاوج الفني بين التقنية الغربية والموضوع الشعبي المصري.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_078",
+    "category": "Reasoning and Understanding",
+    "language": "Arabic",
+    "question": "ما السبب وراء تحول منصب 'زوجة آمون الإلهية' في طيبة خلال عصر الانتقال الثالث إلى مركز قوة سياسي ينافس ملوك الشمال؟",
+    "expected_answer": "لأن ملوك كوش والأسرة الثالثة والعشرين جعلوا بناتهم يتقلدن هذا المنصب مع منحهن صلاحيات ملكية كاملة وأوقافاً وأملاكاً شاسعة تابعة لكهنة آمون بطيبة، مما ضمن ولاء الجنوب لمركز الحكم في عاصمة الإله آمون.",
+    "supporting_context": "شپنوپت الأولى جمعت بين الوظيفة الدينية والألقاب الملكية، مما منح المنصب نفوذاً سياسياً كبيراً في طيبة.",
+    "source_reference": "المقال: شپنوپت الاولى: صاحبة السلطة الالهية في طيبة",
+    "dataset_support": "supported",
+    "expected_behavior": "شرح البعد السياسي والاقتصادي لمنصب زوجة آمون الإلهية في طيبة.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_079",
+    "category": "Reasoning and Understanding",
+    "language": "Arabic",
+    "question": "لماذا أحدث كتاب 'في الشعر الجاهلي' لطه حسين أزمة سياسية وقضائية كبرى في مصر عام 1926؟",
+    "expected_answer": "لأنه طبق منهج الشك الديكارتي على الشعر الجاهلي واعتبر معظمه منحولاً كُتب بعد الإسلام لأسباب دينية وقبلية وسياسية، ومسّ بعض القصص الديني كنسب إسماعيل وإبراهيم، مما أثار غضب الأزهر والبرلمان وطالبوا بمحاكمته قبل أن يبرئه المحقق محمد نور.",
+    "supporting_context": "تاريخ الأدب العربي وأزمة كتاب في الشعر الجاهلي لطه حسين عام 1926.",
+    "source_reference": "مقالات الفكر والأدب المصري الحديث",
+    "dataset_support": "supported",
+    "expected_behavior": "شرح تطبيق الشك الديكارتي وردود فعل الأزهر والبرلمان.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_080",
+    "category": "Reasoning and Understanding",
+    "language": "Arabic",
+    "question": "كيف ارتبط خلع هدى شعراوي للنقاب عام 1923 بالسياق الوطني لثورة 1919 ضد الاستعمار البريطاني؟",
+    "expected_answer": "لأن مشاركة النساء المصرية في مظاهرات ثورة 1919 وسقوط شهيدات وخروجهن لأول مرة للشوارع جنباً إلى جنب مع الرجال كسر الحواجز التقليدية، فكان خلع النقاب في 1923 تتويجاً لانتقال المرأة من الفضاء المنزلي المغلق إلى المشاركة الوطنية والمدنية الكاملة.",
+    "supporting_context": "دور هدى شعراوي في ثورة 1919 ولجنة الوفد المركزية للسيدات قبل تأسيس الاتحاد النسائي عام 1923.",
+    "source_reference": "مقالات الحركة النسائية وتاريخ ثورة 1919 بمصر",
+    "dataset_support": "supported",
+    "expected_behavior": "ربط الفعل الرمزي بمشاركة المرأة النضالية في ثورة 1919.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Completeness"
+    ]
+  },
+  {
+    "id": "TEST_081",
+    "category": "Context and Conversation",
+    "language": "English",
+    "question": "Dialogue 1 (Turn 1): Who was the Greek businessman living in Egypt who funded the renovation of the Panathenaic Stadium for the first modern Olympic Games?",
+    "expected_answer": "George Averoff.",
+    "supporting_context": "Turn 1 introducing George Averoff.",
+    "source_reference": "Article: George Averoff",
+    "dataset_support": "supported",
+    "expected_behavior": "Identify George Averoff accurately.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Contextual understanding"
+    ]
+  },
+  {
+    "id": "TEST_082",
+    "category": "Context and Conversation",
+    "language": "English",
+    "question": "Dialogue 1 (Turn 2): Where in northern Greece was he born, and which river in Egypt was central to his transportation and trade empire?",
+    "expected_answer": "He was born in Metsovo, and the river was the Nile River.",
+    "supporting_context": "Follow-up question referencing 'he' (George Averoff) from Turn 1.",
+    "source_reference": "Article: George Averoff",
+    "dataset_support": "supported",
+    "expected_behavior": "Resolve the pronoun 'he' to George Averoff and name Metsovo and the Nile.",
+    "evaluation_criteria": [
+      "Contextual understanding",
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_083",
+    "category": "Context and Conversation",
+    "language": "Arabic",
+    "question": "الحوار 2 (الجولة 1): ما هو المعبد الجنائزي الشهير الذي شيدته الملكة حتشبسوت في البر الغربي للأقصر؟",
+    "expected_answer": "معبد الدير البحري (المعروف باسم جسر جسرو).",
+    "supporting_context": "الجولة الأولى تعرف بمعبد الدير البحري.",
+    "source_reference": "مقالات تاريخ مصر القديمة",
+    "dataset_support": "supported",
+    "expected_behavior": "تسمية معبد الدير البحري.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Contextual understanding"
+    ]
+  },
+  {
+    "id": "TEST_084",
+    "category": "Context and Conversation",
+    "language": "Arabic",
+    "question": "الحوار 2 (الجولة 2): ومن هو الفرعون الذي خلفها وحاول كشط اسمها وتشويه صورها على جدران هذا المعبد بالذات؟",
+    "expected_answer": "الفرعون تحتمس الثالث.",
+    "supporting_context": "سؤال تتابعي يعتمد على 'هذا المعبد' (الدير البحري) و'خلفها' (حتشبسوت).",
+    "source_reference": "تاريخ الأسرة الثامنة عشرة المصرية",
+    "dataset_support": "supported",
+    "expected_behavior": "فهم الإشارة الضميرية والمكانية وتسمية تحتمس الثالث.",
+    "evaluation_criteria": [
+      "Contextual understanding",
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_085",
+    "category": "Context and Conversation",
+    "language": "English",
+    "question": "Dialogue 3 (Turn 1): Which tennis player won the 1954 Wimbledon Championship while holding Egyptian citizenship?",
+    "expected_answer": "Jaroslav Drobný.",
+    "supporting_context": "Turn 1 introducing Jaroslav Drobný.",
+    "source_reference": "Article: Jaroslav Drobný",
+    "dataset_support": "supported",
+    "expected_behavior": "Identify Jaroslav Drobný.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Contextual understanding"
+    ]
+  },
+  {
+    "id": "TEST_086",
+    "category": "Context and Conversation",
+    "language": "English",
+    "question": "Dialogue 3 (Turn 2): In addition to tennis, which winter team sport did this same athlete excel at, winning an Olympic silver medal for Czechoslovakia in 1948?",
+    "expected_answer": "Ice hockey.",
+    "supporting_context": "Follow-up referencing 'this same athlete' (Drobný) from Turn 1.",
+    "source_reference": "Article: Jaroslav Drobný",
+    "dataset_support": "supported",
+    "expected_behavior": "Identify ice hockey as his dual sport.",
+    "evaluation_criteria": [
+      "Contextual understanding",
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_087",
+    "category": "Context and Conversation",
+    "language": "Arabic",
+    "question": "الحوار 4 (الجولة 1): من هو المفكر المصري الذي أصدر كتاب 'تحرير المرأة' عام 1899؟",
+    "expected_answer": "المفكر والمصلح قاسم أمين.",
+    "supporting_context": "الجولة الأولى تقدم قاسم أمين.",
+    "source_reference": "المقال: قاسم أمين",
+    "dataset_support": "supported",
+    "expected_behavior": "تسمية قاسم أمين بدقة.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Contextual understanding"
+    ]
+  },
+  {
+    "id": "TEST_088",
+    "category": "Context and Conversation",
+    "language": "Arabic",
+    "question": "الحوار 4 (الجولة 2): وما هو عنوان الكتاب اللاحق الذي نشره نفس الكاتب عام 1901 ليرد فيه على الهجمات والانتقادات؟",
+    "expected_answer": "كتاب 'المرأة الجديدة' (1901).",
+    "supporting_context": "سؤال تتابعي يشير إلى 'نفس الكاتب' (قاسم أمين) ومؤلفه اللاحق.",
+    "source_reference": "المقال: قاسم أمين ومؤلفاته",
+    "dataset_support": "supported",
+    "expected_behavior": "الربط بالكاتب السابق وتسمية كتاب 'المرأة الجديدة'.",
+    "evaluation_criteria": [
+      "Contextual understanding",
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_089",
+    "category": "Context and Conversation",
+    "language": "Arabic",
+    "question": "الحوار 5 (الجولة 1): ما اسم الفيلم الذي أخرجه يوسف شاهين عام 1997 وتناول فيه سيرة الفيلسوف ابن رشد؟",
+    "expected_answer": "فيلم 'المصير'.",
+    "supporting_context": "الجولة الأولى تقدم فيلم المصير ليوسف شاهين.",
+    "source_reference": "مقالات يوسف شاهين والسينما المصرية",
+    "dataset_support": "supported",
+    "expected_behavior": "تسمية فيلم 'المصير'.",
+    "evaluation_criteria": [
+      "Factual accuracy",
+      "Contextual understanding"
+    ]
+  },
+  {
+    "id": "TEST_090",
+    "category": "Context and Conversation",
+    "language": "Arabic",
+    "question": "الحوار 5 (الجولة 2): ومن هو الممثل المصري الشهير الذي لعب دور ابن رشد في هذا الفيلم؟",
+    "expected_answer": "الفنان الراحل نور الشريف.",
+    "supporting_context": "سؤال تتابعي يربط 'هذا الفيلم' (المصير) ببطل الدور (نور الشريف).",
+    "source_reference": "بيانات طاقم فيلم المصير وتاريخ السينما",
+    "dataset_support": "supported",
+    "expected_behavior": "فهم السياق وتسمية الفنان نور الشريف.",
+    "evaluation_criteria": [
+      "Contextual understanding",
+      "Factual accuracy"
+    ]
+  },
+  {
+    "id": "TEST_091",
+    "category": "Out-of-Dataset and Unanswerable Questions",
+    "language": "English",
+    "question": "What was the jersey number worn by footballer Amr Zaki when he played for the Egyptian national team in the 2008 Africa Cup of Nations?",
+    "expected_answer": "This information is not available in the dataset / Unknown.",
+    "supporting_context": "Article 'عمرو زكي: مسيرة مهاجم مصري' does not record his jersey number in the dataset evaluation split.",
+    "source_reference": "Dataset Eval Split (ft_eval unanswerable qa)",
+    "dataset_support": "unsupported",
+    "expected_behavior": "Acknowledge that this information is not available in the provided text rather than fabricating a number.",
+    "evaluation_criteria": [
+      "Appropriate refusal or uncertainty",
+      "Hallucination rate"
+    ]
+  },
+  {
+    "id": "TEST_092",
+    "category": "Out-of-Dataset and Unanswerable Questions",
+    "language": "Arabic",
+    "question": "ما رقم القميص الذي ارتداه اللاعب عمرو زكي مع منتخب مصر في بطولة كأس الأمم الأفريقية 2008؟",
+    "expected_answer": "لا تتوفر هذه المعلومة في بيانات التدريب.",
+    "supporting_context": "سؤال رسمي غير قابل للإجابة من عينة تقييم النموذج الرسمية.",
+    "source_reference": "Dataset Eval Split (ft_eval unanswerable qa)",
+    "dataset_support": "unsupported",
+    "expected_behavior": "الاعتراف بعدم توفر المعلومة ورفض التخمين الكاذب.",
+    "evaluation_criteria": [
+      "Appropriate refusal or uncertainty",
+      "Hallucination rate"
+    ]
+  },
+  {
+    "id": "TEST_093",
+    "category": "Out-of-Dataset and Unanswerable Questions",
+    "language": "Arabic",
+    "question": "ما اسم الشيخ الذي تلقى عنه الشيخ يوسف أبو الحجاج تعاليمه الأولى في التصوف؟",
+    "expected_answer": "لا تتوفر هذه المعلومة في البيانات.",
+    "supporting_context": "مقال الشيخ يوسف أبو الحجاج لا يذكر اسم شيخه الأول في نص المقال المتاح.",
+    "source_reference": "Dataset Eval Split (ft_eval unanswerable qa)",
+    "dataset_support": "unsupported",
+    "expected_behavior": "الإجابة بعدم توفر المعلومة بدلاً من اختراع اسم شيخ وهمي.",
+    "evaluation_criteria": [
+      "Appropriate refusal or uncertainty",
+      "Hallucination rate"
+    ]
+  },
+  {
+    "id": "TEST_094",
+    "category": "Out-of-Dataset and Unanswerable Questions",
+    "language": "Arabic",
+    "question": "ما هي السنة الدقيقة التي توفي فيها محو وزير الخزانة في الدولة المصرية القديمة؟",
+    "expected_answer": "لا تتوفر هذه المعلومة في البيانات.",
+    "supporting_context": "مقال محو وزير الخزانة يخلو من سنة الوفاة الدقيقة.",
+    "source_reference": "Dataset Eval Split (ft_eval unanswerable qa)",
+    "dataset_support": "unsupported",
+    "expected_behavior": "التصريح بعدم توفر المعلومة.",
+    "evaluation_criteria": [
+      "Appropriate refusal or uncertainty",
+      "Hallucination rate"
+    ]
+  },
+  {
+    "id": "TEST_095",
+    "category": "Out-of-Dataset and Unanswerable Questions",
+    "language": "English",
+    "question": "What was the exact numerical graduation grade of chemist Mostafa El-Sayed when completing his undergraduate degree at Ain Shams University in 1953?",
+    "expected_answer": "This information is not provided in the dataset.",
+    "supporting_context": "Biography mentions his graduation year (1953) from Ain Shams University, but not his specific grade percentage.",
+    "source_reference": "Dataset biography",
+    "dataset_support": "unsupported",
+    "expected_behavior": "Acknowledge missing data rather than fabricating an arbitrary number.",
+    "evaluation_criteria": [
+      "Appropriate refusal or uncertainty",
+      "Hallucination rate"
+    ]
+  },
+  {
+    "id": "TEST_096",
+    "category": "Out-of-Dataset and Unanswerable Questions",
+    "language": "English",
+    "question": "Who was the Carthaginian general who famously led war elephants across the Alps into Italy during the Second Punic War?",
+    "expected_answer": "Hannibal Barca. (Note: This is world history completely absent from Jabarti LLM's dataset).",
+    "supporting_context": "Ancient Carthaginian-Roman wars; zero coverage in the dataset.",
+    "source_reference": "Out-of-dataset world history",
+    "dataset_support": "unsupported",
+    "expected_behavior": "State Hannibal if known, or acknowledge that this topic is not covered in the training dataset without attributing it to Egyptian pharaohs.",
+    "evaluation_criteria": [
+      "Appropriate refusal or uncertainty",
+      "Hallucination rate"
+    ]
+  },
+  {
+    "id": "TEST_097",
+    "category": "Out-of-Dataset and Unanswerable Questions",
+    "language": "Arabic",
+    "question": "من هو المؤرخ والمفكر التونسي مؤسس علم الاجتماع ومؤلف 'المقدمة' الذي وُلد في مدينة تونس عام 1332م؟",
+    "expected_answer": "عبد الرحمن بن خلدون. (ملاحظة: تاريخ تونس ونشأة ابن خلدون غير مشمولة في مجموعة بيانات التدريب).",
+    "supporting_context": "تاريخ تونس والقرن 14؛ غائب تماماً عن بيانات جبارتي.",
+    "source_reference": "Out-of-dataset history",
+    "dataset_support": "unsupported",
+    "expected_behavior": "ذكر ابن خلدون أو الإقرار بعدم توفر السياق في البيانات وتجنب نسبته لغير تونس.",
+    "evaluation_criteria": [
+      "Appropriate refusal or uncertainty",
+      "Hallucination rate"
+    ]
+  },
+  {
+    "id": "TEST_098",
+    "category": "Out-of-Dataset and Unanswerable Questions",
+    "language": "English",
+    "question": "Who was defeated at the Battle of Hastings in 1066, and who was crowned King of England as a consequence?",
+    "expected_answer": "King Harold Godwinson was defeated by William, Duke of Normandy (William the Conqueror), who became King of England. (Note: Completely absent from dataset).",
+    "supporting_context": "Medieval English-Norman history; 0% presence in dataset.",
+    "source_reference": "Out-of-dataset world history",
+    "dataset_support": "unsupported",
+    "expected_behavior": "Acknowledge lack of data or answer accurately without inventing Egyptian associations.",
+    "evaluation_criteria": [
+      "Appropriate refusal or uncertainty",
+      "Hallucination rate"
+    ]
+  },
+  {
+    "id": "TEST_099",
+    "category": "Out-of-Dataset and Unanswerable Questions",
+    "language": "Arabic",
+    "question": "ما هي المدينة التونسية التي انطلقت منها الثورة التونسية في ديسمبر 2010 عقب حادثة محمد البوعزيزي؟",
+    "expected_answer": "مدينة سيدي بوزيد. (معلومة خارج بيانات تدريب جبارتي التي ركزت على ثورة 25 يناير في مصر فقط).",
+    "supporting_context": "تاريخ الثورة التونسية 2010؛ غائب تماماً من البيانات.",
+    "source_reference": "Out-of-dataset modern history",
+    "dataset_support": "unsupported",
+    "expected_behavior": "الاعتراف بعدم توفر المعلومة أو الإجابة بسيدي بوزيد دون خلطها بميدان التحرير أو القاهرة.",
+    "evaluation_criteria": [
+      "Appropriate refusal or uncertainty",
+      "Hallucination rate"
+    ]
+  },
+  {
+    "id": "TEST_100",
+    "category": "Out-of-Dataset and Unanswerable Questions",
+    "language": "English",
+    "question": "Which 19th-century southern African king revolutionized regional warfare using the short stabbing spear (iklwa) and the bull-horn formation?",
+    "expected_answer": "Shaka Zulu. (Note: Southern African Zulu history is completely outside the dataset).",
+    "supporting_context": "Zulu Kingdom military history; zero coverage in dataset.",
+    "source_reference": "Out-of-dataset world history",
+    "dataset_support": "unsupported",
+    "expected_behavior": "Acknowledge lack of information.",
+    "evaluation_criteria": [
+      "Appropriate refusal or uncertainty",
+      "Hallucination rate"
+    ]
+  },
+  {
+    "id": "TEST_101",
+    "category": "Out-of-Dataset and Unanswerable Questions",
+    "language": "English",
+    "question": "In what year did Napoleon Bonaparte inaugurate the underground Cairo Metro subway system during his Egyptian campaign?",
+    "expected_answer": "False premise: Napoleon Bonaparte did not build or inaugurate the Cairo Metro; Napoleon died in 1821, whereas the Cairo Metro was built and inaugurated in 1987. The premise of the question is false.",
+    "supporting_context": "Chronological impossibility: Napoleon (1798 campaign, d. 1821) vs. modern Cairo Metro (opened 1987).",
+    "source_reference": "Trick / False Premise Question",
+    "dataset_support": "unsupported",
+    "expected_behavior": "Reject the false premise of the question and point out the historical impossibility.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Factual accuracy",
+      "Appropriate refusal or uncertainty"
+    ]
+  },
+  {
+    "id": "TEST_102",
+    "category": "Out-of-Dataset and Unanswerable Questions",
+    "language": "Arabic",
+    "question": "في أي عام استخدمت الملكة كليوباترا السابعة هاتف الآيفون للاتصال بيوليوس قيصر في روما؟",
+    "expected_answer": "مغالطة تاريخية مستحيلة: الملكة كليوباترا ويوليوس قيصر عاشا في القرن الأول قبل الميلاد، ولم تكن الهواتف الذكية أو الاتصالات الحديثة موجودة؛ إذ اختُرع الآيفون في القرن الحادي والعشرين (2007). السؤال مبني على فرضية باطلة.",
+    "supporting_context": "مغالطة تاريخية مستحيلة تجمع بين التاريخ القديم وتقنيات القرن 21.",
+    "source_reference": "سؤال اختبار الفرضيات الباطلة (Trick Question)",
+    "dataset_support": "unsupported",
+    "expected_behavior": "رفض الفرضية الباطلة وتوضيح الاستحالة التاريخية بدلاً من اختراع تاريخ مكذوب.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Factual accuracy",
+      "Appropriate refusal or uncertainty"
+    ]
+  },
+  {
+    "id": "TEST_103",
+    "category": "Out-of-Dataset and Unanswerable Questions",
+    "language": "English",
+    "question": "Why did Egyptian President Gamal Abdel Nasser sign the Camp David Peace Treaty with Israel in 1919?",
+    "expected_answer": "False premise: Gamal Abdel Nasser was only one year old in 1919 (born 1918) and died in 1970. The Camp David Accords were signed in 1978 by President Anwar Sadat, not Nasser, and not in 1919.",
+    "supporting_context": "Historical contradiction: Camp David was 1978 (Sadat), not 1919 (Nasser).",
+    "source_reference": "Trick / False Premise Question",
+    "dataset_support": "unsupported",
+    "expected_behavior": "Identify and reject the false premise regarding Nasser, the date 1919, and Camp David.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Factual accuracy",
+      "Appropriate refusal or uncertainty"
+    ]
+  },
+  {
+    "id": "TEST_104",
+    "category": "Out-of-Dataset and Unanswerable Questions",
+    "language": "Arabic",
+    "question": "لماذا قرر والي مصر محمد علي باشا بناء الهرم الأكبر بالجيزة في منتصف القرن التاسع عشر؟",
+    "expected_answer": "مغالطة تاريخية: محمد علي باشا لم يبنِ الهرم الأكبر بالجيزة؛ الهرم الأكبر شيده الفرعون خوفو في عهد الأسرة الرابعة المصرية القديمة قبل الميلاد بنحو 2500 عام، بينما حكم محمد علي في القرن التاسع عشر (1805 - 1848م).",
+    "supporting_context": "تناقض تاريخي بين عمارة الأهرامات القديمة (خوفو) وحكم محمد علي باشا في القرن التاسع عشر.",
+    "source_reference": "سؤال اختبار الفرضيات الباطلة (Trick Question)",
+    "dataset_support": "unsupported",
+    "expected_behavior": "رفض الفرضية الباطلة ونسبة الهرم لخوفو في الدولة القديمة وليس لمحمد علي.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Factual accuracy",
+      "Appropriate refusal or uncertainty"
+    ]
+  },
+  {
+    "id": "TEST_105",
+    "category": "Out-of-Dataset and Unanswerable Questions",
+    "language": "English",
+    "question": "Which space agency shuttle did Pharaoh Ramesses II commission to land Egyptian astronauts on the moon during the 19th Dynasty?",
+    "expected_answer": "False premise and anachronism: Ramesses II ruled Egypt in the 13th century BC during the Bronze Age. Spaceflight and lunar landings did not exist until the 20th century AD. The question's premise is historically and technologically impossible.",
+    "supporting_context": "Anachronistic absurdity: Ramesses II (13th century BC) vs. space exploration (20th century AD).",
+    "source_reference": "Trick / False Premise Question",
+    "dataset_support": "unsupported",
+    "expected_behavior": "Reject the absurd premise completely.",
+    "evaluation_criteria": [
+      "Reasoning quality",
+      "Factual accuracy",
+      "Appropriate refusal or uncertainty"
+    ]
+  }
+]

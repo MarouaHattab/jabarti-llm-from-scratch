@@ -1,0 +1,3997 @@
+{
+  "metadata": {
+    "benchmark_version": "1.0",
+    "total_questions": 105,
+    "evaluation_time_seconds": 46.4,
+    "device": "cuda",
+    "models_evaluated": [
+      "checkpoints/pretrain_final.pt (Step 20,000)",
+      "checkpoints/finetune-lora/finetune_chat_lora_final.pt (Step 10,779)"
+    ]
+  },
+  "summary": {
+    "overall": {
+      "pretrained": {
+        "answer_correctness": 1.49,
+        "factual_accuracy": 1.42,
+        "relevance": 1.36,
+        "contextual_understanding": 1.39,
+        "reasoning_quality": 1.4,
+        "language_quality": 1.54,
+        "hallucination_resistance": 1.91,
+        "appropriate_refusal": 2.56,
+        "coherence": 1.73
+      },
+      "finetuned": {
+        "answer_correctness": 2.34,
+        "factual_accuracy": 1.82,
+        "relevance": 3.32,
+        "contextual_understanding": 2.57,
+        "reasoning_quality": 1.9,
+        "language_quality": 3.74,
+        "hallucination_resistance": 2.21,
+        "appropriate_refusal": 2.68,
+        "coherence": 4.21
+      }
+    },
+    "by_category": {
+      "Arabic Questions": {
+        "count": 20,
+        "pretrained": {
+          "answer_correctness": 1.48,
+          "factual_accuracy": 1.5,
+          "relevance": 1.45,
+          "contextual_understanding": 1.48,
+          "reasoning_quality": 1.5,
+          "language_quality": 2.15,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 2.3
+        },
+        "finetuned": {
+          "answer_correctness": 2.51,
+          "factual_accuracy": 1.95,
+          "relevance": 3.35,
+          "contextual_understanding": 2.65,
+          "reasoning_quality": 1.95,
+          "language_quality": 3.9,
+          "hallucination_resistance": 2.3,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.33
+        }
+      },
+      "Context and Conversation": {
+        "count": 10,
+        "pretrained": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        },
+        "finetuned": {
+          "answer_correctness": 2.2,
+          "factual_accuracy": 1.8,
+          "relevance": 2.8,
+          "contextual_understanding": 2.3,
+          "reasoning_quality": 1.8,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.25,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "English Questions": {
+        "count": 15,
+        "pretrained": {
+          "answer_correctness": 1.39,
+          "factual_accuracy": 1.5,
+          "relevance": 1.23,
+          "contextual_understanding": 1.37,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.17,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.23
+        },
+        "finetuned": {
+          "answer_correctness": 2.67,
+          "factual_accuracy": 2.1,
+          "relevance": 3.53,
+          "contextual_understanding": 2.82,
+          "reasoning_quality": 2.1,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.4,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.1
+        }
+      },
+      "Factual Knowledge": {
+        "count": 15,
+        "pretrained": {
+          "answer_correctness": 1.83,
+          "factual_accuracy": 1.7,
+          "relevance": 2.03,
+          "contextual_understanding": 1.87,
+          "reasoning_quality": 1.7,
+          "language_quality": 2.13,
+          "hallucination_resistance": 2.13,
+          "appropriate_refusal": 3.0,
+          "coherence": 2.4
+        },
+        "finetuned": {
+          "answer_correctness": 2.45,
+          "factual_accuracy": 2.0,
+          "relevance": 3.13,
+          "contextual_understanding": 2.57,
+          "reasoning_quality": 2.0,
+          "language_quality": 3.87,
+          "hallucination_resistance": 2.33,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.13
+        }
+      },
+      "Out-of-Dataset and Unanswerable Questions": {
+        "count": 15,
+        "pretrained": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.23,
+          "contextual_understanding": 1.12,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.27,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.23
+        },
+        "finetuned": {
+          "answer_correctness": 1.97,
+          "factual_accuracy": 1.4,
+          "relevance": 3.7,
+          "contextual_understanding": 2.55,
+          "reasoning_quality": 1.4,
+          "language_quality": 3.87,
+          "hallucination_resistance": 1.83,
+          "appropriate_refusal": 1.53,
+          "coherence": 4.13
+        }
+      },
+      "Reasoning and Understanding": {
+        "count": 15,
+        "pretrained": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.4,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        },
+        "finetuned": {
+          "answer_correctness": 2.14,
+          "factual_accuracy": 1.5,
+          "relevance": 3.1,
+          "contextual_understanding": 2.3,
+          "reasoning_quality": 2.05,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.23
+        }
+      },
+      "Tunisian Arabic Questions": {
+        "count": 15,
+        "pretrained": {
+          "answer_correctness": 1.55,
+          "factual_accuracy": 1.23,
+          "relevance": 1.4,
+          "contextual_understanding": 1.32,
+          "reasoning_quality": 1.23,
+          "language_quality": 1.7,
+          "hallucination_resistance": 1.73,
+          "appropriate_refusal": 1.93,
+          "coherence": 2.5
+        },
+        "finetuned": {
+          "answer_correctness": 2.33,
+          "factual_accuracy": 1.93,
+          "relevance": 3.47,
+          "contextual_understanding": 2.7,
+          "reasoning_quality": 1.93,
+          "language_quality": 2.57,
+          "hallucination_resistance": 2.33,
+          "appropriate_refusal": 2.2,
+          "coherence": 4.13
+        }
+      }
+    }
+  },
+  "detailed_results": [
+    {
+      "id": "TEST_001",
+      "category": "English Questions",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "Who was George Averoff, and how did he build his fortune in nineteenth-century Egypt?",
+      "expected_answer": "George Averoff was a Greek businessman and philanthropist who expanded his wealth in Egypt through commerce, banking, real estate, and river transportation along the Nile.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "George Averoff was the first fortune in Egypt to build a fortune in the Nile Delta and the Nile Delta in Egypt.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_002",
+      "category": "English Questions",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "When and where was George Averoff born, and what major sports monument did he fund in Athens?",
+      "expected_answer": "He was born on 15 August 1815 in Metsovo, northern Greece (then Ottoman Empire), and he funded the restoration of the Panathenaic Stadium for the 1896 Olympic Games.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "George Averoff was born in Athens in 1949.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_003",
+      "category": "English Questions",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "Who was Jaroslav Drobný, and what dual-sport world achievements is he recognized for?",
+      "expected_answer": "Jaroslav Drobný was an elite amateur tennis player and world champion ice hockey player, inducted into both the International Tennis Hall of Fame and the IIHF Hall of Fame.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "Jaroslav Drobný was a Czech-born American mathematician who studied at the University of Paris and the University of Paris in the United States.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_004",
+      "category": "English Questions",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "Which nationality did Jaroslav Drobný adopt during his major tennis victories, and which two Grand Slam singles titles did he win under it?",
+      "expected_answer": "He competed as an Egyptian citizen, winning the French Open in 1951 and Wimbledon in 1954.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "Jaroslav Drobný adopted, and his major achievements were the first Grand Slam singles titles to win the individual medal.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_005",
+      "category": "English Questions",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "Why did Jaroslav Drobný defect from Czechoslovakia in 1949?",
+      "expected_answer": "He defected because he resented the communist regime's political use of his athletic fame for propaganda and its growing restrictions on his international tournament travel.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "Jaroslav Drobný was defecting to the Czechoslovakian SSR in 1950.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_006",
+      "category": "English Questions",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "What Roman administrative crisis led Emperor Nerva to adopt Trajan in 97 AD?",
+      "expected_answer": "Nerva faced pressure and rebellion from the Praetorian Guard after Domitian's assassination; adopting the popular military general Trajan stabilized military support and secured the succession.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "Trajan was appointed emperor in 97 AD after the emperor's death in 97 AD after the death of Trajan was killed in the Battle of Tartu.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 2.5
+        }
+      }
+    },
+    {
+      "id": "TEST_007",
+      "category": "English Questions",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "What major military reforms did Emperor Gallienus implement during the Crisis of the Third Century?",
+      "expected_answer": "Gallienus created a mobile cavalry reserve capable of rapid response and stripped senatorial aristocrats of senior military commands in favor of experienced equestrian soldiers.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "Emperor Gallienus was the first military commander of the Second Century because he was a military commander and a military commander who served as the commander of the Second Army of the Second Army.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 2.5
+        }
+      }
+    },
+    {
+      "id": "TEST_008",
+      "category": "English Questions",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "What is the Red Basilica in Pergamon, and which Egyptian deities was it dedicated to?",
+      "expected_answer": "The Red Basilica is a massive monumental brick temple complex in Pergamon (modern Turkey) dedicated to the worship of Egyptian deities, primarily Serapis, Isis, and Osiris/Harpocrates.",
+      "pretrained_model": {
+        "response": "The Egyptian religion of Egypt was the first Christian worship of the Egyptian religion in the Middle East. The Coptic religion was the first Christian worship of the Egyptian religion in the Middle East. The Coptic religion was the first Christian worship of the Coptic Orthodox Church in Egypt and the Coptic Orthodox Church in Egypt was the Coptic Orthodox",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 2.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "The Red Basilica is a Roman temple dedicated to the goddess of fertility, and the Red Basilica of Pergamon was dedicated to the goddess of fertility.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_009",
+      "category": "English Questions",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "Which Biblical pharaoh attacked Jerusalem during the reign of Rehoboam, and what Egyptian pharaoh does modern Egyptology identify him with?",
+      "expected_answer": "The Bible names Pharaoh Shishak, whom modern Egyptologists identify with Shoshenq I (founder of the Twenty-second Dynasty).",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "This information is not available",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_010",
+      "category": "English Questions",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "What is the narrative core of the ancient apocryphal text 'Joseph and Aseneth'?",
+      "expected_answer": "The text recounts how Aseneth, the daughter of an Egyptian pagan priest of Heliopolis, rejected her idols, repented, and converted to the worship of the God of Israel before marrying the patriarch Joseph.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "The narrative is the story of the ancient apocryphal text 'Joseph and Asenethus' in the Epistles of the Epistles.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_011",
+      "category": "English Questions",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "Where did art historian Hildegard Zaloscer work between 1946 and 1968 after leaving Austria?",
+      "expected_answer": "She worked as a professor of art history at the University of Alexandria in Egypt.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "Hildegard Zaloscer was a professor of archaeology at the University of Bologna in 1965.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_012",
+      "category": "English Questions",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "What prestigious American science honor did Egyptian-American chemist Mostafa El-Sayed receive in 2007?",
+      "expected_answer": "He received the U.S. National Medal of Science in 2007 for his contributions to nanoscience and laser spectroscopy.",
+      "pretrained_model": {
+        "response": "????????????????????????????????????????????????????????????",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.5,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "Mostafa El-Sayed received the American Academy of Science in 2008 and the American Academy of Science in 2009.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_013",
+      "category": "English Questions",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "Which famous chanson did Alexandria-born songwriter Georges Moustaki compose for Édith Piaf in 1959?",
+      "expected_answer": "He wrote the lyrics to the famous song 'Milord' for Édith Piaf.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "Alexandria-born songwriter Georges Moustaki composed, and Moustaki composers such as Ellen Moustaki and Ellen Moustaki composers such as Ellen Moustaki and Ellen Moustaki composers.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 2.5
+        }
+      }
+    },
+    {
+      "id": "TEST_014",
+      "category": "English Questions",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "What linguistic distinction set Cleopatra VII apart from her Ptolemaic royal predecessors in Egypt?",
+      "expected_answer": "Cleopatra VII was the first and only ruler of the Greek Ptolemaic dynasty who learned to speak the Egyptian language.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "Cleopatra VII was a Ptolemaic royal family who ruled Egypt from c. 1400 to 1400 BC.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_015",
+      "category": "English Questions",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "What is the title of Leila Ahmed's well-known 1999 memoir about growing up in Cairo?",
+      "expected_answer": "Her memoir is titled 'A Border Passage: From Cairo to America—A Woman's Journey'.",
+      "pretrained_model": {
+        "response": ", the memoir about the life of Ahmed's father, Ahmed's father, Ahmed's mother, Ahmed's mother, Ahmed's mother, Ahmed's mother, Ahmed's mother, Ahmed's mother, Ahmed's mother, Ahmed's mother, Ahmed's mother, Ahmed's mother, Ahmed's mother, Ahmed's mother, Ahmed's mother, Ahmed's mother, Ahmed's mother, Ahmed's",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 2.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "Leila Ahmed is a prominent Egyptian writer and journalist.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_016",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "ما المنصب الحكومي الذي تولاه أحمد الليثي في مصر، وما هي الهيئة الدولية التي ترأسها عام 2005؟",
+      "expected_answer": "شغل منصب وزير الزراعة واستصلاح الأراضي في حكومة أحمد نظيف، ثم اختير عام 2005 حاكماً لصندوق التنمية الزراعية الدولي (إيفاد / IFAD).",
+      "pretrained_model": {
+        "response": "؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "احمد الليثي هو وزير المالية في مصر، وقد تولي رئاسة الوزراء خلال الفترة من عام 2005 حتي عام 2011.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_017",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "من هي الفنانة مارغريت نخلة، وأين تلقّت تعليمها الفني العالي؟",
+      "expected_answer": "مارغريت نخلة هي فنانة تشكيلية مصرية من رائدات الفن الحديث وُلدت بالإسكندرية عام 1908، ودرست الفنون في مدرسة الفنون الجميلة بباريس.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "مارغريت نخل هي فنانة مصرية ولدت في القاهرة عام 1984.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_018",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "ما هو المركز الحرفي الشهير الذي أسسه المعماري رمسيس ويسا واصف في الجيزة؟",
+      "expected_answer": "أسس مركز الحرانية للسجاد والنسيج التقليدي في قرية الحرانية بالجيزة لتعليم الأطفال والشباب فنون النسيج اليدوي الفطري.",
+      "pretrained_model": {
+        "response": "؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "رمسيس ويسا هو لاعب مصري بدا مسيرته في مركز شباب الاهلي في القاهرة، ثم انتقل الي مركز شباب الاهلي في القاهرة.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_019",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "من هو المخرج السينمائي المصري يسري نصر الله، ومتى وُلد؟",
+      "expected_answer": "يسري نصر الله هو مخرج سينمائي مصري بارز وُلد في 26 يوليو 1952، وتخرج من كلية الاقتصاد والعلوم السياسية قبل أن يتدرب مع يوسف شاهين.",
+      "pretrained_model": {
+        "response": "، وهو من اسرة فنية معروفة في مصر، حيث بدا مسيرته الفنية في مجال التمثيل والاخراج، حيث شارك في العديد من الاعمال السينمائية والتلفزيونية منها فيلم \"حكايات\" عام 1982، و\"الخيايات\" عام 1982، و\"الخيايات\" عام 1982، و\"الخيا",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "يسري نصر الله هو مخرج مصري ولد في القاهرة عام 1984.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_020",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "لماذا يُعد محمد تيمور رائداً للقصة القصيرة في الأدب العربي الحديث؟",
+      "expected_answer": "لأنه كتب مجموعة 'ما تراه العيون' عام 1917 وقدم قصة 'في القطار' التي أرست القواعد الفنية للقصة القصيرة الواقعية المستقلة عن المقامة.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "محمد تيمور يعد من ابرز شعراء الادب العربي الحديث من خلال الجمع بين الشعر العربي المعاصر، كما جمع بين الادب العربي الحديث والنقد الادبي.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_021",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "ما هي القضية المحورية التي طرحها المفكر قاسم أمين في كتابه 'تحرير المرأة' عام 1899؟",
+      "expected_answer": "دعا إلى إصلاح وضع المرأة من خلال تعليمها، وتقييد الطلاق وتعدد الزوجات، وإلغاء حجب الوجه الصارم، معتبراً أن نهضة المجتمع مرتبطة بتربية الأمهات.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "المفكر قاسم امين اصدر كتابه 'تحرير المراة' عام 1904.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_022",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "من هي الدكتورة سميرة موسى، وما الشعار الذي رفعته حول الطاقة الذرية؟",
+      "expected_answer": "سميرة موسى هي أول عالمة ذرة مصرية؛ رفعت شعار 'الذرة من أجل السلام' ودعت إلى استخدام الطاقة النووية في العلاج الطبي ومكافحة السرطان.",
+      "pretrained_model": {
+        "response": ".",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "سميرة موسي، هي سيدة مصرية بارزة، وهي ابنة الفنان محمد عبد الوهاب، وقد حملت لقب \"جائزة افضل انجاز\" في مصر.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_023",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "ما الدور العسكري الذي لعبه اللواء عبد المنعم خليل في حرب أكتوبر 1973؟",
+      "expected_answer": "شغل منصب قائد الجيش الثاني الميداني خلال مراحل حاسمة من حرب أكتوبر وتولى قيادة القوات في التصدي للثغرة وتأمين خطوط الجبهة.",
+      "pretrained_model": {
+        "response": "؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "اللواء عبد المنعم خليل هو مهاجم شارك في حرب اكتوبر 1973 مع الجيش المصري في حرب اكتوبر 1973.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_024",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "أين يقع ضريح ومسجد الشيخ يوسف أبو الحجاج، وما الموقع الأثري الملاصق له؟",
+      "expected_answer": "يقع في مدينة الأقصر، وقد بُني المسجد داخل الجزء العلوي من معبد الأقصر الفرعوني القديم.",
+      "pretrained_model": {
+        "response": "، يقع ضريح الشيخ يوسف ابو الحجاج في حي الشيخ يوسف في حي الشيخ يوسف في حي الشيخ يوسف في حي الشيخ يوسف.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 2.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "ضريح الشيخ يوسف ابو الحجاج يقع في منطقة الجيزة بمصر.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_025",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "إلى أين نُفي الإمام محمد عبده بعد فشل الثورة العرابية عام 1882؟",
+      "expected_answer": "نُفي محمد عبده في البداية إلى بيروت، ثم لحق بجمال الدين الأفغاني في باريس حيث أصدرا معاً جريدة 'العروة الوثقى'.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "محمد عبده نفي الي مصر عام 1882 بعد انقلاب محمد علي باشا عام 1884.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_026",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "ما الموقف الشهير الذي قامت به هدى شعراوي في محطة قطار القاهرة عام 1923؟",
+      "expected_answer": "خلعت نقابها علناً أمام المستقبلين في محطة القطار عند عودتها من مؤتمر الاتحاد النسائي الدولي في روما عام 1923، مدشنة رمزياً مرحلة جديدة لحركة النساء.",
+      "pretrained_model": {
+        "response": "؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "هدي شعراوي هي ابنة هدي شعراوي.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_027",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "إلى أي بلد نُفي الشاعر أحمد شوقي أثناء الحرب العالمية الأولى، ولماذا؟",
+      "expected_answer": "نفاه الإنجليز إلى إسبانيا عام 1915 بسبب ولائه للخديوي عباس حلمي الثاني بعدما عزله البريطانيون.",
+      "pretrained_model": {
+        "response": "، فان هذا هو الذي كان يظن ان الشاعر كان يظن انه كان يظن ان الشاعر كان يظن ان الشاعر كان يظن ان الشاعر كان يظن ان الشاعر كان يظن ان الشاعر كان يظن ان الشاعر كان يظن ان الشاعر كان يظن ان الشاعر كان يظن ان الشاعر كان",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 2.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "احمد شوقي نفي نفي الشاعر احمد شوقي نفي الي مصر عام 1945.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_028",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "ما اسم الفيلم الذي قدمه يوسف شاهين عام 1997 عن حياة الفيلسوف ابن رشد؟",
+      "expected_answer": "فيلم 'المصير' (1997)، بطولة نور الشريف ومحمود حميدة وليلى علوي.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "يوسف شاهين قدم فيلم «يا لا تريد ان تريد ان تريد ان تريد ان تريد ان تريد ان تريد ان تريد ان تريد ان تريد ان تريد ان تريد ان تريد ان تريد ان تريد ان تريد ان تريد ان تريد",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 2.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      }
+    },
+    {
+      "id": "TEST_029",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "ما أول فيلم سينمائي شاركت فيه فاتن حمامة وهي طفلة، ومن كان بطل الفيلم؟",
+      "expected_answer": "شاركت في فيلم 'يوم سعيد' عام 1940 أمام الموسيقار والمطرب محمد عبد الوهاب.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "فاتن حمامة شاركت في فيلم \"حياة حمامة\" عام 1984.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_030",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "كيف انتهت حياة بطرس غالي رئيس وزراء مصر عام 1910؟",
+      "expected_answer": "اغتيل بطرس غالي في القاهرة عام 1910 برصاص الشاب الصيدلي إبراهيم ناصف الورداني بسبب مواقفه السياسية وقضية دنشواي.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "بطرس غالي استفاد من عمله في وزارة الخارجية المصرية من خلال عمله في وزارة الخارجية المصرية خلال فترة من الاضطرابات السياسية في مصر.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_031",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "ما اسم الفرقة المسرحية التي أسسها الفنان يوسف وهبي عام 1923؟",
+      "expected_answer": "أسس 'فرقة رمسيس' المسرحية التي كانت علامة فارقة في نهضة المسرح الدرامي والميلودرامي بمصر.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "لا تتوفر هذه المعلومة",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_032",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "ما هو المعبد الجنائزي الذي بنته الملكة حتشبسوت في البر الغربي للأقصر، وبأي اسم يُعرف؟",
+      "expected_answer": "معبد الدير البحري، وكان يُعرف في مصر القديمة باسم 'جسر جسرو' (قدس الأقداس).",
+      "pretrained_model": {
+        "response": "، هو معبد مصري قديم يقع في منطقة الهرم الرئيسي في مصر السفلي، وهو معبد مصري قديم يقع في منطقة الهرم الرئيسي في مصر السفلي، وهو معبد في الاسرة الثامنة عشرة.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 2.5
+        }
+      },
+      "finetuned_model": {
+        "response": "الملكة حتشبسوت هي ابنة الملك تحتمس الثالث في الاسرة التاسعة عشرة.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_033",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "أين بنى الفرعون رمسيس الثالث معبده الجنائزي الشهير؟",
+      "expected_answer": "بناه في موقع مدينة هابو بالبر الغربي لمدينة طيبة (الأقصر حالياً).",
+      "pretrained_model": {
+        "response": "، هو معبد مصري قديم يقع في منطقة الجيزة بمصر.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "رمسيس الثالث بني معبده الجنائزي في معبده الجنائزي.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_034",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "مع أي ممثلة شارك الفنان عمر الشريف بطولة فيلم 'صراع في الوادي' عام 1954؟",
+      "expected_answer": "شارك البطولة مع الممثلة فاتن حمامة في أول ظهور سينمائي له، وتزوجا بعده في العام التالي.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "عمر الشريف شارك في فيلم 'صراع في الوادي' عام 1955.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_035",
+      "category": "Arabic Questions",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "ما الاسم العربي الذي عُرف به كتاب المناظر للحسن ابن الهيثم في تاريخ العلوم؟",
+      "expected_answer": "كتاب المناظر (Kitāb al-Manāẓir)، وهو أهم مؤلفاته في البصريات وتشريح العين ونظرية الرؤية.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "كتاب المناظر هو كتاب المناظر للحسن ابن الهيثم.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_036",
+      "category": "Tunisian Arabic Questions",
+      "language": "Tunisian Arabic",
+      "dataset_support": "supported",
+      "question": "شكوني الملكة الفرعونية اللي بنت معبد الدير البحري في طيبة؟",
+      "expected_answer": "الملكة حتشبسوت هي اللي بنت معبد الدير البحري (جسر جسرو) في طيبة (الأقصر).",
+      "pretrained_model": {
+        "response": "؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 2.5,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "الملكة الفرعونية اللي بنت معبد الدير البحري في طيبة خلال الاسرة التاسعة عشرة.",
+        "scores": {
+          "answer_correctness": 4.3,
+          "factual_accuracy": 4.5,
+          "relevance": 4.0,
+          "contextual_understanding": 4.25,
+          "reasoning_quality": 4.5,
+          "language_quality": 2.5,
+          "hallucination_resistance": 4.5,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_037",
+      "category": "Tunisian Arabic Questions",
+      "language": "Tunisian Arabic",
+      "dataset_support": "supported",
+      "question": "شكونو قاسم أمين وشنوة الكتاب المشهور اللي كتبو على حقوق المرأة في مصر؟",
+      "expected_answer": "قاسم أمين هو مصلح اجتماعي مصري، وكتابو المشهور هو 'تحرير المرأة' اللي خرج عام 1899.",
+      "pretrained_model": {
+        "response": "؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 2.5,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "لا تتوفر هذه المعلومة",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 2.5,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_038",
+      "category": "Tunisian Arabic Questions",
+      "language": "Tunisian Arabic",
+      "dataset_support": "supported",
+      "question": "وقتاش تولدت عالمة الذرة المصرية سميرة موسى وشنوة الاختصاص متاعها؟",
+      "expected_answer": "سميرة موسى عالمة ذرة مصرية اختصاصها الفيزياء النووية والشعاعية.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "عالمة الذرة المصرية سميرة موسي تولدت في القاهرة عام 1982، ثم انتقلت الي القاهرة عام 1984.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 2.5,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_039",
+      "category": "Tunisian Arabic Questions",
+      "language": "Tunisian Arabic",
+      "dataset_support": "supported",
+      "question": "شكون أسس فرقة رمسيس المسرحية عام 1923 في مصر؟",
+      "expected_answer": "الفنان يوسف وهبي هو اللي أسس فرقة رمسيس المسرحية عام 1923.",
+      "pretrained_model": {
+        "response": "، وقد كان هذا اول ظهور له في فيلم \"حكاية\" عام 1922، حيث شارك في تاليفه واخراجه من بطولة رشدي اباظة.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 2.5,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "فرقة رمسيس هو مؤسس فرقة رمسيس المسرحية التي كانت جزءا من فرقة رمسيس المسرحية التي كانت جزءا من فرقة رمسيس المسرحية المصرية.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 2.5,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 2.5
+        }
+      }
+    },
+    {
+      "id": "TEST_040",
+      "category": "Tunisian Arabic Questions",
+      "language": "Tunisian Arabic",
+      "dataset_support": "supported",
+      "question": "علاش نفاو الإنكليز الشاعر أحمد شوقي لإسبانيا عام 1915؟",
+      "expected_answer": "خاطر كان قريب وموالي للخديوي عباس حلمي الثاني اللي عزلوه الإنكليز.",
+      "pretrained_model": {
+        "response": "؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 2.5,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "احمد شوقي لاسبانيا هو الشاعر احمد شوقي لاسبانيا الذي كان اول شاعر عربي معروف في مصر.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 2.5,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_041",
+      "category": "Tunisian Arabic Questions",
+      "language": "Tunisian Arabic",
+      "dataset_support": "supported",
+      "question": "فاش كان يخدم أحمد الليثي في الحكومة المصرية في عهد أحمد نظيف؟",
+      "expected_answer": "كان يخدم وزير الزراعة واستصلاح الأراضي.",
+      "pretrained_model": {
+        "response": "، وكان احمد الليثي في الحكومة المصرية انذاك قد ارسل الي مصر في عام 1875، وكان احمد الليثي في الحكومة المصرية انذاك قد ارسل الي مصر في عام 1875، لكنه لم يصدر بعد عن مصر في عام 1875، عندما ارسل الي مصر في عام 1875، ارسل الي مصر في",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 2.5,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 2.5
+        }
+      },
+      "finetuned_model": {
+        "response": "احمد الليثي كان يخدم في الحكومة المصرية خلال عهد احمد نظيف.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 2.5,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_042",
+      "category": "Tunisian Arabic Questions",
+      "language": "Tunisian Arabic",
+      "dataset_support": "supported",
+      "question": "شكون هو المخرج المصري اللي عمل فيلم 'المصير' عام 1997 على ابن رشد؟",
+      "expected_answer": "المخرج يوسف شاهين.",
+      "pretrained_model": {
+        "response": "للمخرج محمد عبد الوهاب، ومن بطولة محمود ياسين، ومن اخراج احمد عبد العزيز.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 2.5,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "لا تتوفر هذه المعلومة",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 2.5,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_043",
+      "category": "Tunisian Arabic Questions",
+      "language": "Tunisian Arabic",
+      "dataset_support": "unsupported",
+      "question": "شكونو حنبعل البرقاوي وشنوة عمل في الحرب البونية الثانية مع روما؟",
+      "expected_answer": "حنبعل هو القائد العسكري القرطاجي الشهير اللي قاد جيوش قرطاج ضد روما وقطع جبال الألب بالأفيال. (ملاحظة: هذه المعلومة خارج بيانات تدريب جبارتي).",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "حنبعل البرقاوي هو الذي شغل منصب قائد الجيش الروماني في روما خلال الحرب البونية الثانية.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 4.0,
+          "contextual_understanding": 2.5,
+          "reasoning_quality": 1.0,
+          "language_quality": 2.5,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_044",
+      "category": "Tunisian Arabic Questions",
+      "language": "Tunisian Arabic",
+      "dataset_support": "unsupported",
+      "question": "شنوة هي عاصمة الدولة الأغلبية في تونس ووين بلاصتها بالضبط؟",
+      "expected_answer": "عاصمة الدولة الأغلبية هي مدينة القيروان. (معلومة خارج بيانات تدريب جبارتي).",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "لا تتوفر هذه المعلومة",
+        "scores": {
+          "answer_correctness": 5.0,
+          "factual_accuracy": 4.0,
+          "relevance": 4.0,
+          "contextual_understanding": 4.0,
+          "reasoning_quality": 4.0,
+          "language_quality": 2.5,
+          "hallucination_resistance": 5.0,
+          "appropriate_refusal": 5.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_045",
+      "category": "Tunisian Arabic Questions",
+      "language": "Tunisian Arabic",
+      "dataset_support": "unsupported",
+      "question": "وقتاش خذات تونس استقلالها وشكون كان أول رئيس للجمهورية التونسية؟",
+      "expected_answer": "تونس استقلت في 20 مارس 1956، وأول رئيس جمهورية هو الحبيب بورقيبة. (معلومة غير موجودة في قاعدة بيانات تدريب جبارتي).",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "تونس هو اول رئيس للجمهورية التونسية في عام 1982، عندما تم انتخابه رئيسا للجمهورية التونسية في عام 1989.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 4.0,
+          "contextual_understanding": 2.5,
+          "reasoning_quality": 1.0,
+          "language_quality": 2.5,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_046",
+      "category": "Tunisian Arabic Questions",
+      "language": "Tunisian Arabic",
+      "dataset_support": "unsupported",
+      "question": "شنوة هو جامع الزيتونة المعمور ووين يقع في تونس؟",
+      "expected_answer": "جامع الزيتونة هو من أقدم وأعرق الجوامع والجامعات الإسلامية، يقع في قلب مدينة تونس العتيقة. (معلومة غير موجودة في بيانات تدريب جبارتي).",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "جامع الزيتونة المعمور هو جامع الزيتونة المعمور في تونس.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 4.0,
+          "contextual_understanding": 2.5,
+          "reasoning_quality": 1.0,
+          "language_quality": 2.5,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_047",
+      "category": "Tunisian Arabic Questions",
+      "language": "Tunisian Arabic",
+      "dataset_support": "unsupported",
+      "question": "كيفاش يطيبو أكلة اللبلابي التونسية وشنوة المكونات الأساسية متاعها؟",
+      "expected_answer": "اللبلابي أكلة شعبية تونسية مكوناتها الأساسية: الحمص المغلي، الخبز اليابس، الكمون، الهريسة، وزيت الزيتون، والبيض. (غير موجودة في بيانات التدريب).",
+      "pretrained_model": {
+        "response": "؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.5,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.0,
+          "language_quality": 2.5,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "يطيبو اكلة اللبلابي التونسية يرجح ان يكون من بين اكثر من عشرين لوحة في متحف القاهرة المعاصر، كما ان هناك عدد من لوحاته التي كتبها في متحف القاهرة المعاصر.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 4.0,
+          "contextual_understanding": 2.5,
+          "reasoning_quality": 1.0,
+          "language_quality": 2.5,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_048",
+      "category": "Tunisian Arabic Questions",
+      "language": "Tunisian Arabic",
+      "dataset_support": "unsupported",
+      "question": "علاش تتسمى صفاقس عاصمة الجنوب في تونس وباش مشهورة اقتصادياً؟",
+      "expected_answer": "صفاقس ثاني أكبر المدن التونسية وتشتهر بإنتاج زيت الزيتون، الصيد البحري، والصناعة والتجارة. (غير موجودة في بيانات تدريب النموذج).",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "صفاقس هو احد ملوك الاسرة السادسة والعشرين في تونس.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 2.5,
+          "contextual_understanding": 1.75,
+          "reasoning_quality": 1.0,
+          "language_quality": 2.5,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_049",
+      "category": "Tunisian Arabic Questions",
+      "language": "Tunisian Arabic",
+      "dataset_support": "unsupported",
+      "question": "وين تجي جزيرة جربة وباش تتميز عند التوانسة؟",
+      "expected_answer": "جزيرة جربة تقع في خليج قابس بالجنوب الشرقي التونسي، وتتميز بالسياحة، المعمار التقليدي، وكنيس الغريبة اليهودي التاريخي. (غير موجودة بالبيانات).",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "جزيرة جربة هي جزيرة جربة ذات اهمية كبيرة في تاريخ مصر القديمة، حيث كانت مدينة جربة تتواجد في منطقة جربة.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 4.0,
+          "contextual_understanding": 2.5,
+          "reasoning_quality": 1.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_050",
+      "category": "Tunisian Arabic Questions",
+      "language": "Tunisian Arabic",
+      "dataset_support": "unsupported",
+      "question": "شنوة معنى كلمة 'برشا' وكلمة 'باهي' في كلام التوانسة اليومي؟",
+      "expected_answer": "'برشا' تعني كثير/جداً، و'باهي' تعني حسناً/طيب/جميل. (معلومة معجمية لهجية غير موجودة في معجم بيانات التدريب).",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "*برشا' وكلمة 'برشا' تعني 'برشا' وكلمة 'برشا' وكلمة 'برشا' وكلمة 'برشا' وكلمة 'برشا' وكلمة 'برشا'.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 4.0,
+          "contextual_understanding": 2.5,
+          "reasoning_quality": 1.0,
+          "language_quality": 2.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      }
+    },
+    {
+      "id": "TEST_051",
+      "category": "Factual Knowledge",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "In what year did Jaroslav Drobný win the Gentlemen's Singles Championship at Wimbledon, and whom did he defeat in the final?",
+      "expected_answer": "Drobný won Wimbledon in 1954, defeating Ken Rosewall in the final.",
+      "pretrained_model": {
+        "response": "Jaroslav Drobnbáč, who won the Gentlemen's championship in the championship game.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "Jaroslav Drobný won the Gentlemen's Singles Championship in the Gentlemen's Gentlemen's Gentlemen's Gentlemen's Gentlemen's Gentlemen's Gentlemen's Gentlemen's G",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 2.0,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      }
+    },
+    {
+      "id": "TEST_052",
+      "category": "Factual Knowledge",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "Which Roman emperor commissioned the construction of the Pantheon in Rome as it exists today?",
+      "expected_answer": "Emperor Hadrian rebuilt the Pantheon around 126 AD (originally commissioned by Marcus Agrippa).",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "Roman emperor commissioned the construction of the Pantheon in Rome in the year 790.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_053",
+      "category": "Factual Knowledge",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "What archaeological structure is located at tomb 10A in the Deir el-Bersha necropolis?",
+      "expected_answer": "Tomb 10A at Deir el-Bersha is the Middle Kingdom burial of nomarch Djehutynakht and his wife, famous for its preserved painted wooden coffins and models.",
+      "pretrained_model": {
+        "response": "The tomb of the Deir el-Bahari is located in the southern part of the city of Deir el-Bahari. The tomb is located in the southern part of the city of Deir el-Bahari. The tomb is located in the southern part of the city of Deir el-Bahari. The tomb is",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 2.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "This information is not available",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_054",
+      "category": "Factual Knowledge",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "What title did Shepenupet I hold in ancient Thebes during the Twenty-third Dynasty?",
+      "expected_answer": "Shepenupet I held the office of God's Wife of Amun (God's Adoratrice of Amun) in Thebes, exercising sacred and political power.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "Shepenupet I was the king of the Twenty-third Dynasty.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_055",
+      "category": "Factual Knowledge",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "When and where was Olympic diving medalist Farid Simaika killed during World War II?",
+      "expected_answer": "Farid Simaika was shot down and killed on 11 September 1943 in Makassar, Celebes (Indonesia) by Japanese forces while serving in the U.S. Army Air Forces.",
+      "pretrained_model": {
+        "response": "Simaika was a member of the Olympic team at the Olympic Games in 1945, she was awarded the Silver Medal of the Order of the British Empire in 1946.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "Olympic diving medalist Farid Simaika was killed during World War II in 1945.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_056",
+      "category": "Factual Knowledge",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "في أي عام تم افتتاح قناة السويس رسمياً للملاحة الدولية، ومن كان حاكم مصر آنذاك؟",
+      "expected_answer": "افتُتحت قناة السويس في 17 نوفمبر 1869 في عهد الخديوي إسماعيل.",
+      "pretrained_model": {
+        "response": "، تم انشاء قناة السويس رسميا في 1 يناير عام 1924، وكانت القناة الاولي من نوعها في اي عام.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "قناة السويس رسميا للملاحة الدولية عام 2021، تم افتتاح قناة السويس رسميا للملاحة الدولية في ابريل 2021.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_057",
+      "category": "Factual Knowledge",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "من هو مؤسس الدولة الفاطمية الذي دخلت جيوشه مصر وبنت مدينة القاهرة وجامع الأزهر؟",
+      "expected_answer": "القائد جوهر الصقلي بأمر من الخليفة الفاطمي المعز لدين الله عام 969م.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "محمد علي باشا هو مؤسس الدولة الفاطمية التي كانت مركزا هاما للسلطان، وقد تولي الحكم في مصر خلال الفترة الممتدة من عام 1118 الي عام 1118، ثم تولي الحكم بعد وفاة السلطان.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_058",
+      "category": "Factual Knowledge",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "ما هي المعركة الشهيرة التي قاد فيها سيف الدين قطز جيش المماليك لهزيمة المغول عام 1260م؟",
+      "expected_answer": "معركة عين جالوت (1260م).",
+      "pretrained_model": {
+        "response": "؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "سيف الدين قطز جيش المماليك قاد جيشه الي جانب المماليك، ثم قاد جيشه الي جانب المماليك.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_059",
+      "category": "Factual Knowledge",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "من هو الملك المصري الذي نقل العاصمة إلى 'أخت آتون' ودعا إلى التوحيد وعبادة آتون؟",
+      "expected_answer": "الملك إخناتون (أمنحتب الرابع) من الأسرة الثامنة عشرة.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "الملك المصري هو الملك المصري الذي نقل العاصمة الي 'اخت اتون في مصر خلال فترة حكمه.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_060",
+      "category": "Factual Knowledge",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "من هو المعماري الذي صمم هرم زوسر المدرج في سقارة؟",
+      "expected_answer": "الوزير والمهندس إمحوتب، في عهد الملك زوسر (الأسرة الثالثة).",
+      "pretrained_model": {
+        "response": ".",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "هرم زوسر المدرج هو من تصميم المعماري الذي صمم علي طراز معماري من الحجر الجيري في سقارة.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_061",
+      "category": "Factual Knowledge",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "في أي عام تم توقيع معاهدة السلام المصرية الإسرائيلية، ومن كان رئيساً لمصر آنذاك؟",
+      "expected_answer": "تم توقيع المعاهدة عام 1979 في عهد الرئيس محمد أنور السادات.",
+      "pretrained_model": {
+        "response": "، كانت معاهدة السلام المصرية الاسرائيلية هي التي وقعت في عام 1948 في اعقاب حرب الايام الستة عام 1967، التي وقعت في عام 1967، هي التي وقعت في عام 1967، هي التي وقعت في عام 1967، هي التي وقعت في عام 1967، هي التي وقعت في عام 1967، هي التي وقعت في عام 1967، هي التي وقعت في عام",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 2.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "اي عامر، الذي تم توقيع معاهدة السلام المصرية عام 1956، تم توقيع معاهدة السلام المصرية عام 1956، ثم تم توقيع معاهدة السلام المصرية عام 1959.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 2.5
+        }
+      }
+    },
+    {
+      "id": "TEST_062",
+      "category": "Factual Knowledge",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "من هو المؤرخ المصري الشهير مؤلف كتاب 'عجائب الآثار في التراجم والأخبار' الذي سُمي مشروع جبارتي باسمه؟",
+      "expected_answer": "عبد الرحمن الجبرتي (1753 - 1825م)، المؤرخ المصري الذي أرخ للحملة الفرنسية وعصر محمد علي.",
+      "pretrained_model": {
+        "response": "، وهو الذي كان له تاثير كبير علي الثقافة المصرية القديمة.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "المؤرخ المصري الشهير جبارتي هو مؤلف كتاب \"عجائب الاثار في التراجم والاخبار\" الذي نشر عام 1985.",
+        "scores": {
+          "answer_correctness": 3.4,
+          "factual_accuracy": 3.0,
+          "relevance": 4.0,
+          "contextual_understanding": 3.5,
+          "reasoning_quality": 3.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 3.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_063",
+      "category": "Factual Knowledge",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "ما المعركة البحرية الشهيرة عام 1798 التي حطم فيها الأسطول البريطاني بقيادة نيلسون أسطول نابليون بونابرت في مصر؟",
+      "expected_answer": "معركة أبي قير البحرية (معركة النيل) عام 1798 في خليج أبي قير قرب الإسكندرية.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "لا تتوفر هذه المعلومة",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_064",
+      "category": "Factual Knowledge",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "من هو اللغوي الفرنسي الذي استطاع فك رموز حجر رشيد وقراءة اللغة الهيروغليفية عام 1822؟",
+      "expected_answer": "عالم الآثار واللغات جان فرانسوا شامبليون (Jean-François Champollion).",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "لا تتوفر هذه المعلومة",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_065",
+      "category": "Factual Knowledge",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "ما اسم المتحف الأثري الكبير الذي شيدته مصر في الجيزة بالقرب من الأهرامات لاستيعاب المجموعة الكاملة لتوت عنخ آمون؟",
+      "expected_answer": "المتحف المصري الكبير (Grand Egyptian Museum - GEM).",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "لا تتوفر هذه المعلومة",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_066",
+      "category": "Reasoning and Understanding",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "How did the geographic separation between the Nile river commerce in Alexandria and political power in Cairo influence George Averoff's philanthropic priorities?",
+      "expected_answer": "Averoff made his money through Nile transport, banking, and grain trade connecting Alexandria's port to interior Egypt; this commercial network enabled him to fund both local Greek institutions in Egypt and grand civic projects in Greece, bridging diaspora wealth with homeland statehood.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.4,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "The geographic separation between the Nile and the Nile was the first major trade route between Egypt and the Middle East, and the Nile was the first major trade route between Egypt and Egypt.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.7,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 2.5
+        }
+      }
+    },
+    {
+      "id": "TEST_067",
+      "category": "Reasoning and Understanding",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "Compare the leadership challenges of Roman Emperor Nerva with Emperor Gallienus: how did their solutions to military insubordination differ?",
+      "expected_answer": "Nerva addressed Praetorian insubordination through political diplomacy and dynastic co-optation by adopting the respected general Trajan; Gallienus addressed military crisis through structural military reform, creating an autonomous mobile cavalry force and excluding senatorial elites from command.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.4,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "Roman Emperor Nerva was the commander of the Roman army during the Roman Empire's conquest of Romania and the Roman Empire.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 2.1,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_068",
+      "category": "Reasoning and Understanding",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "Why did the Cold War political environment make Jaroslav Drobný's defection and subsequent Egyptian citizenship a unique episode in sports diplomacy?",
+      "expected_answer": "Czechoslovakia's communist authorities used sports stars for regime propaganda while restricting foreign travel; Drobný's defection deprived the Eastern bloc of a top champion, and Egypt's granting of citizenship offered an unaligned non-Western passport allowing him to compete worldwide as a stateless exile.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.4,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "Jaroslav Drobný's defection was a political environment that led to the creation of the Egyptian National Sports Council, which was established in the late 19th century.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 2.1,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_069",
+      "category": "Reasoning and Understanding",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "In what ways did the architectural design of the Red Basilica in Pergamon reflect the synthesis of Roman imperial engineering and Egyptian religious practices?",
+      "expected_answer": "It combined Roman engineering feats—such as massive fired-brick walls, subterranean vaulted tunnels, and marble revetments—with Egyptian ritual requirements for water basins, sacred Nile-like immersion pools, and monumental cult statues of Serapis and Isis.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.4,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "The Red Basilica was built in Pergamon by the architects of the early Roman Empire and later became a Roman architect.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 2.1,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_070",
+      "category": "Reasoning and Understanding",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "Why did ancient Jewish Hellenistic writers compose narratives like 'Joseph and Aseneth' rather than relying strictly on the brief Genesis account of Joseph's marriage?",
+      "expected_answer": "The Genesis text briefly states Joseph married the daughter of an Egyptian priest without explaining how a righteous Hebrew patriarch could marry an idolater; the narrative was created to resolve this theological anxiety by portraying her dramatic conversion to monotheism.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.4,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "The Jewish Chronicle of Joseph's marriage was not a historical account, but a historical account of Joseph's marriage was not a historical account, but a historical account of Joseph's marriage was not a historical account.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.7,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 2.5
+        }
+      }
+    },
+    {
+      "id": "TEST_071",
+      "category": "Reasoning and Understanding",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "كيف تختلف فلسفة رمسيس ويسا واصف المعمارية في الحرانية عن تيار الحداثة المعمارية الغربية التي سادت في مصر في النصف الأول من القرن العشرين؟",
+      "expected_answer": "رفض ويسا واصف استيراد الخرسانة الجاهزة والأنماط الغربية الجاهزة دون روح، وركز على الطين ومواد البيئة المحلية، مؤمناً بأن الإبداع ينبع من تحرير طاقات الحرفيين الفطريين وربط العمارة بالهوية والتراث الوظيفي الحي.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.4,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "رمسيس ويسا تختلف من خلال الجمع بين الاعمدة في الحداثة والتقنيات المعمارية الغربية في عصر الدولة الوسطي، مما يشير الي ان الحداثة في عصر الدولة الحديثة كانت مرتبطة ارتباطا وثيقا بالثقافة المصرية.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 2.1,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_072",
+      "category": "Reasoning and Understanding",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "ما الفرق بين المنهج الذي اتبعه قاسم أمين في 'تحرير المرأة' ومنهج المصلحين الدينيين المحافظين في زمانه؟",
+      "expected_answer": "اعتمد قاسم أمين على إعادة قراءة مقاصد الشريعة واستنباط أدلة من الفقه الإسلامي تدعم تعليم المرأة وحقوقها وتحد من سوء استخدام الطلاق وتعدد الزوجات، في حين اعتمد المحافظون على الأعراف الموروثة واعتبار وضع المرأة القائم ثابتاً دينياً.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.4,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "قاسم امين هو مؤلف كتاب «التحرير المراة» الذي جمع بين التفاعل الاجتماعي والتفاعل الاجتماعي.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 2.1,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_073",
+      "category": "Reasoning and Understanding",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "كيف وظف المخرج يوسف شاهين قصة الفيلسوف ابن رشد في فيلم 'المصير' للتعليق على أحداث مصر والعالم العربي في تسعينيات القرن العشرين؟",
+      "expected_answer": "استخدم شاهين محنة ابن رشد وحرق كتبه في قرطبة كمعادل درامي لمواجهة جماعات التطرف الديني والأصولية التي اغتالت المثقفين في التسعينيات، مؤكداً أن 'الأفكار لها أجنحة ولا يمكن حرقها'، دفاعاً عن حرية التعبير والعقلانية.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.4,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "يوسف شاهين هو الذي جمع بين عمله في الفيلسوف ابن رشد في كتابه \"المنزل\" الذي نشر عام 1972.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 2.1,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_074",
+      "category": "Reasoning and Understanding",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "لماذا يُعتبر مشروع محمد علي باشا في مصر بداية تأسيس الدولة الحديثة على الرغم من أنه كان والياً عثمانياً؟",
+      "expected_answer": "لأنه بنى مؤسسات دولة مركزية مستقلة عملياً: أسس جيشاً وطنياً نظامياً، بنى مصانع للأسلحة والنسيج، أنشأ شبكة ترع وقناطر كبرى لتنظيم الري، وأرسل البعثات العلمية لأوروبا، وحوّل ولاية مصر إلى قوة إقليمية كبرى.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.4,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "محمد علي باشا يعد من ابرز معالم هذا المشروع لانه كان واليا عثمانيا علي مصر خلال فترة حكمه.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 2.1,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_075",
+      "category": "Reasoning and Understanding",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "قارن بين النتائج السياسية لنفي كل من أحمد شوقي ومحمد عبده: كيف أثر النفي على إنتاج كل منهما الفكري والأدبي؟",
+      "expected_answer": "نفي محمد عبده إلى بيروت وباريس جعله يحتك بالغرب والفكر الأوروبي وأثمر جريدة 'العروة الوثقى' مع الأفغاني ومشروع إصلاح الأزهر؛ بينما نفي شوقي إلى الأندلس في إسبانيا ألهمه قصائد الشوق والمنفى (الأندلسيات) والاطلاع على حضارة المسلمين هناك مما صقل شاعريته الكلاسيكية.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.4,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "احمد شوقي محمد عبده هو الذي كان اول من تولي رئاسة الجمهورية العربية المتحدة في عام 1956، ثم تولي رئاسة الجمهورية العربية المتحدة في عام 1959.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 2.1,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_076",
+      "category": "Reasoning and Understanding",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "ما العلاقة بين بناء السد العالي في أسوان في عهد جمال عبد الناصر والحملة الدولية لليونسكو لإنقاذ آثار النوبة؟",
+      "expected_answer": "بناء السد العالي أدى إلى تشكيل بحيرة ناصر الضخمة التي كانت ستغمر معابد النوبة القديمة مثل معبدي أبو سمبل وفيلة؛ فقادت منظمة اليونسكو حملة دولية هندسية غير مسبوقة لنقل المعابد وتفكيكها وتركيبها في هضاب مرتفعة.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.4,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "جمال عبد الناصر هو الذي كان مسؤولا عن بناء السد العالي في اسوان، مما اتاح له الوصول الي الموارد المائية في اسوان.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 2.1,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_077",
+      "category": "Reasoning and Understanding",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "كيف جسدت تجربة الفنانة مارغريت نخلة التفاعل بين الهوية المصرية الشعبية والمدرسة الانطباعية الفرنسية؟",
+      "expected_answer": "مزجت بين التقنيات اللونية السريعة والضوء الخاص بالمدرسة الانطباعية والوحشية التي تعلمتها في باريس، وبين موضوعات الحياة اليومية المصرية الأصيلة كأسواق الإسكندرية والطقوس القبطية وحفلات الزفاف الشعبية.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.4,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "مارغريت نخلة الت جسدت هذه التجربة من خلال الجمع بين الهوية المصرية والانتماء الي جانب حضورها في السينما المصرية في السينما والتلفزيون والتلفزيون.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 2.1,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_078",
+      "category": "Reasoning and Understanding",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "ما السبب وراء تحول منصب 'زوجة آمون الإلهية' في طيبة خلال عصر الانتقال الثالث إلى مركز قوة سياسي ينافس ملوك الشمال؟",
+      "expected_answer": "لأن ملوك كوش والأسرة الثالثة والعشرين جعلوا بناتهم يتقلدن هذا المنصب مع منحهن صلاحيات ملكية كاملة وأوقافاً وأملاكاً شاسعة تابعة لكهنة آمون بطيبة، مما ضمن ولاء الجنوب لمركز الحكم في عاصمة الإله آمون.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.4,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "امون الالهية هو الذي تولي منصب نائب الملك في طيبة خلال فترة انتقالية مهمة من تاريخ مصر القديمة، اذ تولي منصب نائب الملك في عهد رمسيس الثاني.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 2.1,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_079",
+      "category": "Reasoning and Understanding",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "لماذا أحدث كتاب 'في الشعر الجاهلي' لطه حسين أزمة سياسية وقضائية كبرى في مصر عام 1926؟",
+      "expected_answer": "لأنه طبق منهج الشك الديكارتي على الشعر الجاهلي واعتبر معظمه منحولاً كُتب بعد الإسلام لأسباب دينية وقبلية وسياسية، ومسّ بعض القصص الديني كنسب إسماعيل وإبراهيم، مما أثار غضب الأزهر والبرلمان وطالبوا بمحاكمته قبل أن يبرئه المحقق محمد نور.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.4,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "حسين ازمة سياسية استفادت من انخراط في الحركة الوطنية المصرية عام 1928، ثم استفادت من التوتر بين مصر وفرنسا.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 2.1,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_080",
+      "category": "Reasoning and Understanding",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "كيف ارتبط خلع هدى شعراوي للنقاب عام 1923 بالسياق الوطني لثورة 1919 ضد الاستعمار البريطاني؟",
+      "expected_answer": "لأن مشاركة النساء المصرية في مظاهرات ثورة 1919 وسقوط شهيدات وخروجهن لأول مرة للشوارع جنباً إلى جنب مع الرجال كسر الحواجز التقليدية، فكان خلع النقاب في 1923 تتويجاً لانتقال المرأة من الفضاء المنزلي المغلق إلى المشاركة الوطنية والمدنية الكاملة.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.4,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "هدي شعراوي ارتبط ذلك بالثورة 1919، اذ كان من ابرز قادة الثورة في مصر.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 2.1,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_081",
+      "category": "Context and Conversation",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "Dialogue 1 (Turn 1): Who was the Greek businessman living in Egypt who funded the renovation of the Panathenaic Stadium for the first modern Olympic Games?",
+      "expected_answer": "George Averoff.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "This information is not available",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_082",
+      "category": "Context and Conversation",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "Dialogue 1 (Turn 2): Where in northern Greece was he born, and which river in Egypt was central to his transportation and trade empire?",
+      "expected_answer": "He was born in Metsovo, and the river was the Nile River.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "Dialogue 2 was the first to be established in Egypt in the early 19th century.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_083",
+      "category": "Context and Conversation",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "الحوار 2 (الجولة 1): ما هو المعبد الجنائزي الشهير الذي شيدته الملكة حتشبسوت في البر الغربي للأقصر؟",
+      "expected_answer": "معبد الدير البحري (المعروف باسم جسر جسرو).",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "الملكة حتشبسوت هي ابنة الملك تحتمس الثالث في الاسرة التاسعة عشرة.",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_084",
+      "category": "Context and Conversation",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "الحوار 2 (الجولة 2): ومن هو الفرعون الذي خلفها وحاول كشط اسمها وتشويه صورها على جدران هذا المعبد بالذات؟",
+      "expected_answer": "الفرعون تحتمس الثالث.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "كشط هي زوجة الملك الذي خلفها في عهد الملك تحتمس الثالث، وقد خلفها في ذلك الوقت علي جدرانها في معبد الكرنك.",
+        "scores": {
+          "answer_correctness": 4.3,
+          "factual_accuracy": 4.5,
+          "relevance": 4.0,
+          "contextual_understanding": 4.25,
+          "reasoning_quality": 4.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 4.5,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_085",
+      "category": "Context and Conversation",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "Dialogue 3 (Turn 1): Which tennis player won the 1954 Wimbledon Championship while holding Egyptian citizenship?",
+      "expected_answer": "Jaroslav Drobný.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "Dialogue 3 (Turn 1): Which tennis player won the 1954 Wimbledon Championship.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_086",
+      "category": "Context and Conversation",
+      "language": "English",
+      "dataset_support": "supported",
+      "question": "Dialogue 3 (Turn 2): In addition to tennis, which winter team sport did this same athlete excel at, winning an Olympic silver medal for Czechoslovakia in 1948?",
+      "expected_answer": "Ice hockey.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "Dialogue 3 (Turn 3): In addition to the Olympic gold medal in 1948 and a bronze medal in 1948 and a bronze medal in 1948 and 1945.",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_087",
+      "category": "Context and Conversation",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "الحوار 4 (الجولة 1): من هو المفكر المصري الذي أصدر كتاب 'تحرير المرأة' عام 1899؟",
+      "expected_answer": "المفكر والمصلح قاسم أمين.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "لا تتوفر هذه المعلومة",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_088",
+      "category": "Context and Conversation",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "الحوار 4 (الجولة 2): وما هو عنوان الكتاب اللاحق الذي نشره نفس الكاتب عام 1901 ليرد فيه على الهجمات والانتقادات؟",
+      "expected_answer": "كتاب 'المرأة الجديدة' (1901).",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "لا تتوفر هذه المعلومة",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.5,
+          "relevance": 1.5,
+          "contextual_understanding": 1.5,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_089",
+      "category": "Context and Conversation",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "الحوار 5 (الجولة 1): ما اسم الفيلم الذي أخرجه يوسف شاهين عام 1997 وتناول فيه سيرة الفيلسوف ابن رشد؟",
+      "expected_answer": "فيلم 'المصير'.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "يوسف شاهين: لا تتوفر هذه المعلومة",
+        "scores": {
+          "answer_correctness": 1.9,
+          "factual_accuracy": 1.5,
+          "relevance": 2.5,
+          "contextual_understanding": 2.0,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_090",
+      "category": "Context and Conversation",
+      "language": "Arabic",
+      "dataset_support": "supported",
+      "question": "الحوار 5 (الجولة 2): ومن هو الممثل المصري الشهير الذي لعب دور ابن رشد في هذا الفيلم؟",
+      "expected_answer": "الفنان الراحل نور الشريف.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.3,
+          "factual_accuracy": 1.5,
+          "relevance": 1.0,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.5,
+          "language_quality": 1.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "ابن رشد هو الممثل المصري الشهير الذي لعب دور ابن رشد في فيلم \"جولة 2\".",
+        "scores": {
+          "answer_correctness": 2.5,
+          "factual_accuracy": 1.5,
+          "relevance": 4.0,
+          "contextual_understanding": 2.75,
+          "reasoning_quality": 1.5,
+          "language_quality": 4.0,
+          "hallucination_resistance": 2.0,
+          "appropriate_refusal": 3.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_091",
+      "category": "Out-of-Dataset and Unanswerable Questions",
+      "language": "English",
+      "dataset_support": "unsupported",
+      "question": "What was the jersey number worn by footballer Amr Zaki when he played for the Egyptian national team in the 2008 Africa Cup of Nations?",
+      "expected_answer": "This information is not available in the dataset / Unknown.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "This information is not available",
+        "scores": {
+          "answer_correctness": 5.0,
+          "factual_accuracy": 4.0,
+          "relevance": 4.0,
+          "contextual_understanding": 4.0,
+          "reasoning_quality": 4.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 5.0,
+          "appropriate_refusal": 5.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_092",
+      "category": "Out-of-Dataset and Unanswerable Questions",
+      "language": "Arabic",
+      "dataset_support": "unsupported",
+      "question": "ما رقم القميص الذي ارتداه اللاعب عمرو زكي مع منتخب مصر في بطولة كأس الأمم الأفريقية 2008؟",
+      "expected_answer": "لا تتوفر هذه المعلومة في بيانات التدريب.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "عمرو زكي ارتداه اللاعب في بطولة كاس الامم الافريقية 2008 التي اقيمت في مدينة بوسطن بولاية نيومكسيكو.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 4.0,
+          "contextual_understanding": 2.5,
+          "reasoning_quality": 1.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_093",
+      "category": "Out-of-Dataset and Unanswerable Questions",
+      "language": "Arabic",
+      "dataset_support": "unsupported",
+      "question": "ما اسم الشيخ الذي تلقى عنه الشيخ يوسف أبو الحجاج تعاليمه الأولى في التصوف؟",
+      "expected_answer": "لا تتوفر هذه المعلومة في البيانات.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "الشيخ يوسف ابو الحجاج هو الذي تلقي تعليمه الاولي في التصوف.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 4.0,
+          "contextual_understanding": 2.5,
+          "reasoning_quality": 1.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_094",
+      "category": "Out-of-Dataset and Unanswerable Questions",
+      "language": "Arabic",
+      "dataset_support": "unsupported",
+      "question": "ما هي السنة الدقيقة التي توفي فيها محو وزير الخزانة في الدولة المصرية القديمة؟",
+      "expected_answer": "لا تتوفر هذه المعلومة في البيانات.",
+      "pretrained_model": {
+        "response": "؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.5,
+          "contextual_understanding": 1.25,
+          "reasoning_quality": 1.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 4.5
+        }
+      },
+      "finetuned_model": {
+        "response": "محو وزير الخزانة في الدولة المصرية القديمة توفي في القاهرة عام 1300 قبل الميلاد.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 4.0,
+          "contextual_understanding": 2.5,
+          "reasoning_quality": 1.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_095",
+      "category": "Out-of-Dataset and Unanswerable Questions",
+      "language": "English",
+      "dataset_support": "unsupported",
+      "question": "What was the exact numerical graduation grade of chemist Mostafa El-Sayed when completing his undergraduate degree at Ain Shams University in 1953?",
+      "expected_answer": "This information is not provided in the dataset.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "This information is not available",
+        "scores": {
+          "answer_correctness": 5.0,
+          "factual_accuracy": 4.0,
+          "relevance": 4.0,
+          "contextual_understanding": 4.0,
+          "reasoning_quality": 4.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 5.0,
+          "appropriate_refusal": 5.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_096",
+      "category": "Out-of-Dataset and Unanswerable Questions",
+      "language": "English",
+      "dataset_support": "unsupported",
+      "question": "Who was the Carthaginian general who famously led war elephants across the Alps into Italy during the Second Punic War?",
+      "expected_answer": "Hannibal Barca. (Note: This is world history completely absent from Jabarti LLM's dataset).",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "The Carthaginian general was the Carthaginian general who was the Carthaginian general who was the Carthaginian general who was the Carthaginian general who was the Carthaginian general who was the Carthaginian general who was the Carthaginian general who was the Carthaginian general who was the Carthaginian general who was the Carthaginian general who was the Carthaginian general who was the",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 2.5,
+          "contextual_understanding": 1.75,
+          "reasoning_quality": 1.0,
+          "language_quality": 2.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      }
+    },
+    {
+      "id": "TEST_097",
+      "category": "Out-of-Dataset and Unanswerable Questions",
+      "language": "Arabic",
+      "dataset_support": "unsupported",
+      "question": "من هو المؤرخ والمفكر التونسي مؤسس علم الاجتماع ومؤلف 'المقدمة' الذي وُلد في مدينة تونس عام 1332م؟",
+      "expected_answer": "عبد الرحمن بن خلدون. (ملاحظة: تاريخ تونس ونشأة ابن خلدون غير مشمولة في مجموعة بيانات التدريب).",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "المؤرخ والمفكر التونسي هو المؤرخ والمفكر التونسي ولد في مدينة تونس عام 1332م في مدينة تونس.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 4.0,
+          "contextual_understanding": 2.5,
+          "reasoning_quality": 1.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_098",
+      "category": "Out-of-Dataset and Unanswerable Questions",
+      "language": "English",
+      "dataset_support": "unsupported",
+      "question": "Who was defeated at the Battle of Hastings in 1066, and who was crowned King of England as a consequence?",
+      "expected_answer": "King Harold Godwinson was defeated by William, Duke of Normandy (William the Conqueror), who became King of England. (Note: Completely absent from dataset).",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "The Battle of Hastings was a major battle in the Battle of Hastings, and the Battle of Hastings in 1068.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 2.5,
+          "contextual_understanding": 1.75,
+          "reasoning_quality": 1.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_099",
+      "category": "Out-of-Dataset and Unanswerable Questions",
+      "language": "Arabic",
+      "dataset_support": "unsupported",
+      "question": "ما هي المدينة التونسية التي انطلقت منها الثورة التونسية في ديسمبر 2010 عقب حادثة محمد البوعزيزي؟",
+      "expected_answer": "مدينة سيدي بوزيد. (معلومة خارج بيانات تدريب جبارتي التي ركزت على ثورة 25 يناير في مصر فقط).",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "محمد البوعزي هو احد ابرز معالم المدينة التونسية في تونس.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 4.0,
+          "contextual_understanding": 2.5,
+          "reasoning_quality": 1.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_100",
+      "category": "Out-of-Dataset and Unanswerable Questions",
+      "language": "English",
+      "dataset_support": "unsupported",
+      "question": "Which 19th-century southern African king revolutionized regional warfare using the short stabbing spear (iklwa) and the bull-horn formation?",
+      "expected_answer": "Shaka Zulu. (Note: Southern African Zulu history is completely outside the dataset).",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "The long stabbing spear (iklwa) was formed by the long-forming spear (iklwa) and the long-forming spear (iklwa) was formed by the long-forming spear (iklwa) and the long-forming spear (ik",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 2.5,
+          "contextual_understanding": 1.75,
+          "reasoning_quality": 1.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 2.5
+        }
+      }
+    },
+    {
+      "id": "TEST_101",
+      "category": "Out-of-Dataset and Unanswerable Questions",
+      "language": "English",
+      "dataset_support": "unsupported",
+      "question": "In what year did Napoleon Bonaparte inaugurate the underground Cairo Metro subway system during his Egyptian campaign?",
+      "expected_answer": "False premise: Napoleon Bonaparte did not build or inaugurate the Cairo Metro; Napoleon died in 1821, whereas the Cairo Metro was built and inaugurated in 1987. The premise of the question is false.",
+      "pretrained_model": {
+        "response": "The Cairo Metro subway system was built in Cairo in the early 20th century and was completed in the early 20th century. The Cairo Metro subway system was built in the early 20th century and was built in the early 20th century. The Cairo Metro subway system was built in the early 20th century and was built",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 4.0,
+          "contextual_understanding": 2.5,
+          "reasoning_quality": 1.0,
+          "language_quality": 2.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "Napoleon Bonaparte inaugurates the Cairo Metro subway system, which was inaugurated in the Cairo Metro subway system.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 4.0,
+          "contextual_understanding": 2.5,
+          "reasoning_quality": 1.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_102",
+      "category": "Out-of-Dataset and Unanswerable Questions",
+      "language": "Arabic",
+      "dataset_support": "unsupported",
+      "question": "في أي عام استخدمت الملكة كليوباترا السابعة هاتف الآيفون للاتصال بيوليوس قيصر في روما؟",
+      "expected_answer": "مغالطة تاريخية مستحيلة: الملكة كليوباترا ويوليوس قيصر عاشا في القرن الأول قبل الميلاد، ولم تكن الهواتف الذكية أو الاتصالات الحديثة موجودة؛ إذ اختُرع الآيفون في القرن الحادي والعشرين (2007). السؤال مبني على فرضية باطلة.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "الملكة كليوباترا السابعة كانت هاتف الايفون للاتصال بيوليوس قيصر، الذي كان قد خدم في روما.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 4.0,
+          "contextual_understanding": 2.5,
+          "reasoning_quality": 1.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_103",
+      "category": "Out-of-Dataset and Unanswerable Questions",
+      "language": "English",
+      "dataset_support": "unsupported",
+      "question": "Why did Egyptian President Gamal Abdel Nasser sign the Camp David Peace Treaty with Israel in 1919?",
+      "expected_answer": "False premise: Gamal Abdel Nasser was only one year old in 1919 (born 1918) and died in 1970. The Camp David Accords were signed in 1978 by President Anwar Sadat, not Nasser, and not in 1919.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "Gamal Abdel Nasser sign the Camp David Peace Treaty with Israel in 1919.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 4.0,
+          "contextual_understanding": 2.5,
+          "reasoning_quality": 1.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_104",
+      "category": "Out-of-Dataset and Unanswerable Questions",
+      "language": "Arabic",
+      "dataset_support": "unsupported",
+      "question": "لماذا قرر والي مصر محمد علي باشا بناء الهرم الأكبر بالجيزة في منتصف القرن التاسع عشر؟",
+      "expected_answer": "مغالطة تاريخية: محمد علي باشا لم يبنِ الهرم الأكبر بالجيزة؛ الهرم الأكبر شيده الفرعون خوفو في عهد الأسرة الرابعة المصرية القديمة قبل الميلاد بنحو 2500 عام، بينما حكم محمد علي في القرن التاسع عشر (1805 - 1848م).",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "والي مصر محمد علي باشا قرر بناء الهرم الاكبر بالجيزة لانه كان قد شيد الهرم الاكبر بالجيزة في عهد السلطان محمد علي باشا.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 4.0,
+          "contextual_understanding": 2.5,
+          "reasoning_quality": 1.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 0.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 4.5
+        }
+      }
+    },
+    {
+      "id": "TEST_105",
+      "category": "Out-of-Dataset and Unanswerable Questions",
+      "language": "English",
+      "dataset_support": "unsupported",
+      "question": "Which space agency shuttle did Pharaoh Ramesses II commission to land Egyptian astronauts on the moon during the 19th Dynasty?",
+      "expected_answer": "False premise and anachronism: Ramesses II ruled Egypt in the 13th century BC during the Bronze Age. Spaceflight and lunar landings did not exist until the 20th century AD. The question's premise is historically and technologically impossible.",
+      "pretrained_model": {
+        "response": "",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 1.0,
+          "contextual_understanding": 1.0,
+          "reasoning_quality": 1.0,
+          "language_quality": 1.0,
+          "hallucination_resistance": 1.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 1.0
+        }
+      },
+      "finetuned_model": {
+        "response": "Pharaoh Ramesses II commissioned the astronauts on the moon.",
+        "scores": {
+          "answer_correctness": 1.5,
+          "factual_accuracy": 1.0,
+          "relevance": 4.0,
+          "contextual_understanding": 2.5,
+          "reasoning_quality": 1.0,
+          "language_quality": 4.0,
+          "hallucination_resistance": 0.5,
+          "appropriate_refusal": 1.0,
+          "coherence": 4.5
+        }
+      }
+    }
+  ]
+}
