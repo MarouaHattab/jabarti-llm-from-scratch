@@ -120,8 +120,7 @@ Figure 3 details the internal routing of a single decoder block: Pre-LayerNorm i
     $$\text{scale} = \sqrt{2 \times n_{\text{layers}}} = \sqrt{2 \times 8} = 4.0$$
     This dampens variance growth along the residual pathway in accordance with GPT-2 initialization principles.
 * **Weight Tying:**
-  * To minimize parameter redundancy and regularize the model, the output language modeling head shares its weight matrix directly with the token embedding matrix:
-    $$\text{LM\_Head.weight} \equiv \text{Embedding.token\_embedding.weight} \in \mathbb{R}^{32000 \times 512}$$
+  * To minimize parameter redundancy and regularize the model, the output language modeling head shares its weight matrix directly with the token embedding matrix: $\mathrm{LM\_Head.weight} \equiv \mathrm{Embedding.token\_embedding.weight} \in \mathbb{R}^{32000 \times 512}$.
 
 ---
 
